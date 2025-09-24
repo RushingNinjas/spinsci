@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* header intentionally omitted; logo is embedded into hero background */}
         {children}
       </body>
     </html>
