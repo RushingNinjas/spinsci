@@ -20,9 +20,9 @@ export default function HomePage() {
             className="h-8 md:h-10 w-auto opacity-90"
           />
         </div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2100&q=60')] bg-cover bg-center opacity-25"></div>
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-25"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/15 via-[#2A9DF4]/10 to-[#1b6fb4]/10"></div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] bg-[url('/graphics/hero-waves.svg')] bg-bottom bg-cover opacity-60"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] bg-[url(/graphics/hero-waves.svg)] bg-bottom bg-cover opacity-60"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.15),transparent_50%)]"></div>
         

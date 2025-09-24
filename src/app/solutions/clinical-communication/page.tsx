@@ -12,7 +12,7 @@ export default function ClinicalCommunicationPage() {
       {/* Hero Section */}
       <section className="relative py-32 px-6">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0b2a46] to-[#081a2c]"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534759846116-57975b3c0c91?auto=format&fit=crop&w=2100&q=60')] bg-cover bg-center opacity-15"></div>
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1534759846116-57975b3c0c91?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-15"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.15),transparent_50%)]"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto">
