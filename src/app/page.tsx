@@ -204,7 +204,7 @@ export default function HomePage() {
               Why Healthcare Leaders Choose SpinSci
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Built by healthcare veterans, powered by cutting-edge AI, trusted by the industry's most innovative health systems
+              Built by healthcare veterans, powered by cutting-edge AI, trusted by the industry&apos;s most innovative health systems
             </p>
           </motion.div>
 
@@ -217,7 +217,7 @@ export default function HomePage() {
               },
               {
                 title: "Proven at Scale",
-                description: "Processing 400M+ healthcare interactions annually, touching 60M+ patients across the nation's leading health systems.",
+                description: "Processing 400M+ healthcare interactions annually, touching 60M+ patients across the nation&apos;s leading health systems.",
                 icon: "📊"
               },
               {
@@ -272,7 +272,7 @@ export default function HomePage() {
               Trusted by Healthcare Leaders
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              The nation's most innovative health systems rely on SpinSci to deliver exceptional patient experiences
+              The nation&apos;s most innovative health systems rely on SpinSci to deliver exceptional patient experiences
             </p>
           </motion.div>
 
@@ -311,7 +311,7 @@ export default function HomePage() {
               ))}
             </div>
             <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
-              "SpinSci didn't just improve our patient access—it revolutionized it. We cut call times in half, 
+              &quot;SpinSci didn&apos;t just improve our patient access—it revolutionized it. We cut call times in half, 
               moved 40% of scheduling to digital channels, and our patient satisfaction scores increased by 35%. 
               This is the future of healthcare delivery."
             </blockquote>
@@ -362,7 +362,7 @@ export default function HomePage() {
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">SpinSci</h3>
               <p className="text-blue-200 text-lg leading-relaxed mb-6">
-                The AI-powered platform that's transforming healthcare access, communication, and financial services for health systems nationwide.
+                The AI-powered platform that&apos;s transforming healthcare access, communication, and financial services for health systems nationwide.
               </p>
               <div className="flex space-x-4">
                 <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10">

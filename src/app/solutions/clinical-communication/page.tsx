@@ -236,7 +236,7 @@ export default function ClinicalCommunicationPage() {
               Ready to Revolutionize Clinical Communication?
             </h2>
             <p className="text-xl text-purple-100 mb-12 max-w-2xl mx-auto">
-              Join leading health systems that have transformed clinical communication with SpinSci's intelligent platform.
+              Join leading health systems that have transformed clinical communication with SpinSci&apos;s intelligent platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 border-0 rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group">

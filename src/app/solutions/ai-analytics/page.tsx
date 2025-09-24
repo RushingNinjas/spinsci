@@ -233,10 +233,10 @@ export default function AIAnalyticsPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-200 bg-clip-text text-transparent">
-              Ready to Unlock Your Data's Potential?
+              Ready to Unlock Your Data&apos;s Potential?
             </h2>
             <p className="text-xl text-orange-100 mb-12 max-w-2xl mx-auto">
-              Join leading health systems that have transformed their operations with SpinSci's AI-powered analytics platform.
+              Join leading health systems that have transformed their operations with SpinSci&apos;s AI-powered analytics platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 border-0 rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 group">

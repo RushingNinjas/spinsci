@@ -146,7 +146,7 @@ export default function FinancialServicesPage() {
               Measurable Financial Impact
             </h2>
             <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              See the financial transformation with SpinSci's intelligent payment platform
+              See the financial transformation with SpinSci&apos;s intelligent payment platform
             </p>
           </motion.div>
 
@@ -236,7 +236,7 @@ export default function FinancialServicesPage() {
               Ready to Transform Patient Financial Services?
             </h2>
             <p className="text-xl text-green-100 mb-12 max-w-2xl mx-auto">
-              Join leading health systems that have revolutionized patient financial services with SpinSci's intelligent platform.
+              Join leading health systems that have revolutionized patient financial services with SpinSci&apos;s intelligent platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 border-0 rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 group">

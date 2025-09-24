@@ -185,7 +185,7 @@ export default function PatientAccessPage() {
               Ready to Transform Patient Access?
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-              Join leading health systems that have revolutionized patient access with SpinSci's AI-powered platform.
+              Join leading health systems that have revolutionized patient access with SpinSci&apos;s AI-powered platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 border-0 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group">
