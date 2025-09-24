@@ -313,7 +313,7 @@ export default function HomePage() {
             <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
               &quot;SpinSci didn&apos;t just improve our patient access—it revolutionized it. We cut call times in half, 
               moved 40% of scheduling to digital channels, and our patient satisfaction scores increased by 35%. 
-              This is the future of healthcare delivery."
+              This is the future of healthcare delivery.&quot;
             </blockquote>
             <div className="flex items-center justify-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
