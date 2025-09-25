@@ -314,11 +314,11 @@ export default function ContactPage() {
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">< 24h</div>
+                <div className="text-3xl font-bold text-white mb-2">&lt; 24h</div>
                 <div className="text-blue-200">Email Response</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">< 2h</div>
+                <div className="text-3xl font-bold text-white mb-2">&lt; 2h</div>
                 <div className="text-blue-200">Phone Response</div>
               </div>
               <div className="text-center">
