@@ -415,7 +415,7 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 h-full">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">Strategic Partners</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {["NICE CXOne", "Cisco", "Five9", "Avaya", "Genesys", "Vonage", "Zoom", "RingCentral", "8x8", "UJet", "Glea", "Intermedia"].map((partner, i) => (
+                  {["NICE CXOne", "Cisco", "Five9", "Avaya", "Genesys", "Vonage", "Zoom", "RingCentral", "8x8", "Intermedia"].map((partner, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, scale: 0.8 }}
