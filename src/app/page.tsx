@@ -399,27 +399,77 @@ export default function HomePage() {
               Trusted by Leading CCaaS, UCaaS and EHR Vendors
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Leading technology partners trust SpinSci to deliver exceptional healthcare automation solutions
+              Strategic partnerships that power exceptional healthcare automation solutions
             </p>
           </motion.div>
 
+          {/* Strategic Partners */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
+            className="mb-16"
           >
-            {["Epic", "Cerner", "athenahealth", "8x8", "RingCentral"].map((partner, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#2A9DF4]/20"
-              >
-                {partner}
-              </motion.div>
-            ))}
+            <h3 className="text-2xl font-bold text-white mb-8">Strategic Partners</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+              {["NICE CXOne", "Cisco", "Five9", "Avaya", "Genesys", "Vonage", "Zoom", "RingCentral", "8x8", "UJet", "Glea", "Intermedia"].map((partner, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.05 }}
+                  className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#2A9DF4]/20 text-sm text-center px-2"
+                >
+                  {partner}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Value Add Partners */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-16"
+          >
+            <h3 className="text-2xl font-bold text-white mb-8">Value Add Partners</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
+              {["CDW", "WWT", "Presidio", "ConvergeOne", "NTT", "CX Advanced Solutions", "Trace3"].map((partner, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.05 }}
+                  className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20 text-sm text-center px-2"
+                >
+                  {partner}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* EHR Partners */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-bold text-white mb-8">EHR Partners</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+              {["Oracle Health", "Epic", "Athena Health", "NextGen", "Meditech", "eClinicalWorks"].map((partner, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.05 }}
+                  className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/20 text-sm text-center px-2"
+                >
+                  {partner}
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
