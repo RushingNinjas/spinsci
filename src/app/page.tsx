@@ -421,34 +421,33 @@ export default function HomePage() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: i * 0.05 }}
-                      className="bg-white/20 rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
+                      className="bg-white/20 rounded-lg p-4 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
                     >
-                      <div className="w-8 h-8 bg-white rounded flex items-center justify-center mr-2">
-                        {partner === "Cisco" ? (
-                          <img src="/logos/Cisco.jpeg" alt="Cisco" className="w-6 h-6 object-contain" />
-                        ) : partner === "NICE CXOne" ? (
-                          <img src="/logos/NICECXOne.png" alt="NICE CXOne" className="w-6 h-6 object-contain" />
-                        ) : partner === "Five9" ? (
-                          <img src="/logos/Five9.jpeg" alt="Five9" className="w-6 h-6 object-contain" />
-                        ) : partner === "Avaya" ? (
-                          <img src="/logos/avaya.jpeg" alt="Avaya" className="w-6 h-6 object-contain" />
-                        ) : partner === "Genesys" ? (
-                          <img src="/logos/genesys.jpeg" alt="Genesys" className="w-6 h-6 object-contain" />
-                        ) : partner === "Vonage" ? (
-                          <img src="/logos/vonage.png" alt="Vonage" className="w-6 h-6 object-contain" />
-                        ) : partner === "Zoom" ? (
-                          <img src="/logos/zoom.png" alt="Zoom" className="w-6 h-6 object-contain" />
-                        ) : partner === "RingCentral" ? (
-                          <img src="/logos/ringcentral.jpeg" alt="RingCentral" className="w-6 h-6 object-contain" />
-                        ) : partner === "8x8" ? (
-                          <img src="/logos/8x8.jpeg" alt="8x8" className="w-6 h-6 object-contain" />
-                        ) : partner === "Intermedia" ? (
-                          <img src="/logos/intermedia.jpeg" alt="Intermedia" className="w-6 h-6 object-contain" />
-                        ) : (
-                          <span className="text-[#2A9DF4] text-xs font-bold">{partner.charAt(0)}</span>
-                        )}
-                      </div>
-                      <span className="text-white text-xs font-medium">{partner}</span>
+                      {partner === "Cisco" ? (
+                        <img src="/logos/Cisco.jpeg" alt="Cisco" className="h-10 w-auto object-contain" />
+                      ) : partner === "NICE CXOne" ? (
+                        <img src="/logos/NICECXOne.png" alt="NICE CXOne" className="h-10 w-auto object-contain" />
+                      ) : partner === "Five9" ? (
+                        <img src="/logos/Five9.jpeg" alt="Five9" className="h-10 w-auto object-contain" />
+                      ) : partner === "Avaya" ? (
+                        <img src="/logos/avaya.jpeg" alt="Avaya" className="h-10 w-auto object-contain" />
+                      ) : partner === "Genesys" ? (
+                        <img src="/logos/genesys.jpeg" alt="Genesys" className="h-10 w-auto object-contain" />
+                      ) : partner === "Vonage" ? (
+                        <img src="/logos/vonage.png" alt="Vonage" className="h-10 w-auto object-contain" />
+                      ) : partner === "Zoom" ? (
+                        <img src="/logos/zoom.png" alt="Zoom" className="h-10 w-auto object-contain" />
+                      ) : partner === "RingCentral" ? (
+                        <img src="/logos/ringcentral.jpeg" alt="RingCentral" className="h-10 w-auto object-contain" />
+                      ) : partner === "8x8" ? (
+                        <img src="/logos/8x8.jpeg" alt="8x8" className="h-10 w-auto object-contain" />
+                      ) : partner === "Intermedia" ? (
+                        <img src="/logos/intermedia.jpeg" alt="Intermedia" className="h-10 w-auto object-contain" />
+                      ) : (
+                        <div className="h-10 w-16 bg-white/40 rounded flex items-center justify-center">
+                          <span className="text-white text-sm font-bold">{partner.charAt(0)}</span>
+                        </div>
+                      )}
                     </motion.div>
                   ))}
                 </div>
@@ -514,34 +513,96 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+      {/* What Our Clients Are Saying Section */}
       <section className="py-32 px-6 bg-gradient-to-r from-[#2A9DF4]/25 via-blue-600/20 to-cyan-500/25 backdrop-blur-sm">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <div className="flex justify-center mb-8">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 text-yellow-400 fill-current" />
-              ))}
-            </div>
-            <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
-              &quot;SpinSci didn&apos;t just improve our patient access—it revolutionized it. We cut call times in half, 
-              moved 40% of scheduling to digital channels, and our patient satisfaction scores increased by 35%. 
-              This is the future of healthcare delivery.&quot;
-            </blockquote>
-            <div className="flex items-center justify-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
-                JS
-              </div>
-              <div className="text-left">
-                <p className="text-white font-semibold text-lg">Dr. Jennifer Smith</p>
-                <p className="text-blue-200">Chief Information Officer, Regional Health System</p>
-              </div>
-            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              What Our Clients Are Saying
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Real feedback from healthcare leaders who have transformed their operations with SpinSci
+            </p>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "Sometimes we're not very adaptive to new technologies, but our Nursing staff loved SpinSci and saw the value the minute we went live with it.",
+                rating: 4.5
+              },
+              {
+                quote: "SpinSci has allowed us 6 more hours per day to really get the patient experience right. Losing that call could really be their life.",
+                rating: 5
+              },
+              {
+                quote: "Patients, customers were unhappy. We were able to take technology, integrate it, and now we're able to provide a completely different experience. Now when a patient calls in we know who's calling and why they're calling.",
+                rating: 5
+              },
+              {
+                quote: "Patients were unhappy. Now we're able to provide a completely different experience. Now when a patient calls, we know who's calling and why they're calling.",
+                rating: 5
+              },
+              {
+                quote: "We're able to decrease patient look-up time- it's provided real results to our hospital, it's provided real results to our customers, SpinSci is now a trusted advisor.",
+                rating: 5
+              },
+              {
+                quote: "When a patient calls the technology recognizes the phone number of the patient which then automatically opens the correct EHR, after the implementation we saved about 43 seconds per call.",
+                rating: 4
+              },
+              {
+                quote: "This technology has allowed us 6 more hours in our day to really get the (patient) experience right. Losing that call could really be their life.",
+                rating: 4.5
+              },
+              {
+                quote: "SpinSci was flexible with the implementation allowing us to quickly stand up a pilot. They were very creative and provided a great effort for a customized solution. They really stepped up for us.",
+                rating: 5
+              },
+              {
+                quote: "Our contact center agents used to work in 11 screens, we now have that down to 1 operator console thanks to SpinSci. It also provided a higher level of personal experience.",
+                rating: 4
+              }
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="group"
+              >
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 h-full">
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((_, starIndex) => (
+                      <Star 
+                        key={starIndex} 
+                        className={`w-5 h-5 ${
+                          starIndex < Math.floor(testimonial.rating) 
+                            ? 'text-yellow-400 fill-current' 
+                            : starIndex < testimonial.rating 
+                            ? 'text-yellow-400 fill-current opacity-50' 
+                            : 'text-gray-400'
+                        }`} 
+                      />
+                    ))}
+                  </div>
+                  <blockquote className="text-white text-lg leading-relaxed mb-4 italic">
+                    &quot;{testimonial.quote}&quot;
+                  </blockquote>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto">
+                      {String.fromCharCode(65 + i)}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
