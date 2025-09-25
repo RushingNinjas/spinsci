@@ -403,74 +403,92 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Strategic Partners */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-16"
-          >
-            <h3 className="text-2xl font-bold text-white mb-8">Strategic Partners</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
-              {["NICE CXOne", "Cisco", "Five9", "Avaya", "Genesys", "Vonage", "Zoom", "RingCentral", "8x8", "UJet", "Glea", "Intermedia"].map((partner, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.05 }}
-                  className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#2A9DF4]/20 text-sm text-center px-2"
-                >
-                  {partner}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          {/* Three Partner Categories */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Strategic Partners */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="group"
+            >
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 h-full">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Strategic Partners</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {["NICE CXOne", "Cisco", "Five9", "Avaya", "Genesys", "Vonage", "Zoom", "RingCentral", "8x8", "UJet", "Glea", "Intermedia"].map((partner, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: i * 0.05 }}
+                      className="bg-white/20 rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded flex items-center justify-center mr-2">
+                        <span className="text-white text-xs font-bold">{partner.charAt(0)}</span>
+                      </div>
+                      <span className="text-white text-xs font-medium">{partner}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
 
-          {/* Value Add Partners */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-16"
-          >
-            <h3 className="text-2xl font-bold text-white mb-8">Value Add Partners</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
-              {["CDW", "WWT", "Presidio", "ConvergeOne", "NTT", "CX Advanced Solutions", "Trace3"].map((partner, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.05 }}
-                  className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20 text-sm text-center px-2"
-                >
-                  {partner}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+            {/* Value Add Partners */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="group"
+            >
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 h-full">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Value Add Partners</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {["CDW", "WWT", "Presidio", "ConvergeOne", "NTT", "CX Advanced Solutions", "Trace3"].map((partner, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: i * 0.05 }}
+                      className="bg-white/20 rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded flex items-center justify-center mr-2">
+                        <span className="text-white text-xs font-bold">{partner.charAt(0)}</span>
+                      </div>
+                      <span className="text-white text-xs font-medium">{partner}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
 
-          {/* EHR Partners */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-8"
-          >
-            <h3 className="text-2xl font-bold text-white mb-8">EHR Partners</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
-              {["Oracle Health", "Epic", "Athena Health", "NextGen", "Meditech", "eClinicalWorks"].map((partner, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.05 }}
-                  className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/20 text-sm text-center px-2"
-                >
-                  {partner}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+            {/* EHR Partners */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="group"
+            >
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 h-full">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">EHR Partners</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {["Oracle Health", "Epic", "Athena Health", "NextGen", "Meditech", "eClinicalWorks"].map((partner, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: i * 0.05 }}
+                      className="bg-white/20 rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded flex items-center justify-center mr-2">
+                        <span className="text-white text-xs font-bold">{partner.charAt(0)}</span>
+                      </div>
+                      <span className="text-white text-xs font-medium">{partner}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
