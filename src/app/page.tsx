@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-32 px-6 relative bg-gradient-to-br from-orange-50/40 via-rose-50/40 to-pink-50/40">
+      <section className="py-32 px-6 relative bg-gradient-to-br from-[#2A9DF4]/8 via-blue-50/12 to-cyan-50/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
