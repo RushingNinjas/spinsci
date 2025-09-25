@@ -10,28 +10,58 @@ import Navigation from "@/components/Navigation";
 export default function AboutPage() {
   const leadership = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Andy Asava",
       title: "Chief Executive Officer",
-      bio: "Former VP of Digital Health at Mayo Clinic with 15+ years in healthcare technology and AI implementation.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=60"
-    },
-    {
-      name: "Michael Rodriguez",
-      title: "Chief Technology Officer",
-      bio: "Ex-Google AI researcher specializing in healthcare automation and machine learning systems.",
+      bio: "The Strategist - Growth, Strategy, and Inspiration. Works closely with the Founder to improve cross functional business alignment and to achieve SpinSci's long-term vision. His core focus is 'value creation'.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
     },
     {
-      name: "Dr. Jennifer Kim",
-      title: "Chief Medical Officer",
-      bio: "Board-certified physician with expertise in clinical workflow optimization and patient experience design.",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=60"
+      name: "Rajit Kumar",
+      title: "Founder / Chief Innovation Officer",
+      bio: "The Visionary - Transformational, Entrepreneurial, and Motivational. Since co-founding SpinSci in 2006, Rajit has transformed SpinSci from a service-based delivery organization into a true healthcare innovator with deep investments in patient engagement solutions.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60"
     },
     {
-      name: "David Thompson",
+      name: "Alice Liou",
+      title: "Vice President of Finance & HR Ops",
+      bio: "Finance and People Expert: Budgeting, Forecasting, Talent Acquisition and Workforce Planning. Specialist on financial analysis, strategic planning, budget preparation, team leadership and collaboration.",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      name: "Doug Lang",
+      title: "Senior Vice President of Services",
+      bio: "COO | CCO | SaaS | CX | Customer Success. High-level executive responsible for leading and managing the service operations of SpinSci. With over 15 years of executive experience, he is a seasoned operational leader with a passion for customer success.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      name: "Ashvin Asava",
       title: "Chief Revenue Officer",
-      bio: "Healthcare industry veteran with 20+ years driving growth at leading health technology companies.",
+      bio: "Chief Revenue Officer - Sales Leadership, Sales Ops, and New Ventures. Moved into this position after his role as Vice President of Sales, showing his rapid trajectory at SpinSci. Has deep technical knowledge and strong understanding of healthcare provider challenges.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      name: "Rohit Potaraju",
+      title: "Vice President of Product Management",
+      bio: "The Product Leader - Roadmaps, Disruption and Excellence. Responsible for leading and developing the organization's expansive portfolio of solutions. Focuses on building impactful experiences in the Patient Engagement domain.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      name: "Cody Clark",
+      title: "Vice President of Sales",
+      bio: "Sales - Patient Journey, Relationships, and Execution. Thoroughly enjoys all aspects of meeting with customers, identifying areas where SpinSci can help, and providing a better healthcare experience for all involved.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      name: "Forrest Salsberry",
+      title: "Vice President of Sales",
+      bio: "Sales - Goal Attainment, Communication, and Relationships. Brings both B2B and healthcare experience to SpinSci. Has fostered deep relationships with customers and partners and strives to deliver excellent results.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      name: "John Hanson",
+      title: "Vice President of Sales (North America)",
+      bio: "Sales - Strategic, Leadership-Oriented, Revenue-Driven. Leads a team of direct and channel sales professionals who deliver innovative and advanced contact center solutions to clients across various industries.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
     }
   ];
 
@@ -158,7 +188,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {leadership.map((leader, index) => (
               <motion.div
                 key={leader.name}
