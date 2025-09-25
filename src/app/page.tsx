@@ -423,8 +423,16 @@ export default function HomePage() {
                       transition={{ duration: 0.5, delay: i * 0.05 }}
                       className="bg-white/20 rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
                     >
-                      <div className="w-8 h-8 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded flex items-center justify-center mr-2">
-                        <span className="text-white text-xs font-bold">{partner.charAt(0)}</span>
+                      <div className="w-8 h-8 bg-white rounded flex items-center justify-center mr-2">
+                        {partner === "Cisco" ? (
+                          <img src="/logos/cisco.png" alt="Cisco" className="w-6 h-6 object-contain" />
+                        ) : partner === "NICE CXOne" ? (
+                          <img src="/logos/nice-cxone.png" alt="NICE CXOne" className="w-6 h-6 object-contain" />
+                        ) : partner === "Five9" ? (
+                          <img src="/logos/five9.png" alt="Five9" className="w-6 h-6 object-contain" />
+                        ) : (
+                          <span className="text-[#2A9DF4] text-xs font-bold">{partner.charAt(0)}</span>
+                        )}
                       </div>
                       <span className="text-white text-xs font-medium">{partner}</span>
                     </motion.div>
