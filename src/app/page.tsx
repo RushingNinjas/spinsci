@@ -442,7 +442,7 @@ export default function HomePage() {
             >
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 h-full">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">Value Add Partners</h3>
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   {["CDW", "WWT", "Presidio", "ConvergeOne", "NTT", "CX Advanced Solutions", "Trace3"].map((partner, i) => (
                     <motion.div
                       key={i}
