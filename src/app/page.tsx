@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-32 px-6 relative bg-gradient-to-br from-blue-100/20 via-blue-50/30 to-cyan-100/25">
+      <section className="py-32 px-6 relative bg-gradient-to-br from-amber-50/60 via-emerald-50/60 to-sky-50/60">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -171,7 +171,7 @@ export default function HomePage() {
                           <li key={j} className="flex items-center text-blue-200">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
-          </li>
+                          </li>
                         ))}
                       </ul>
                       <div className="mt-6 space-y-2">
