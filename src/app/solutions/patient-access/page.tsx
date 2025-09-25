@@ -5,13 +5,15 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Users, Calendar, MessageSquare, BarChart3, Clock, Smartphone, Globe, Shield } from "lucide-react";
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 export default function PatientAccessPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-[#2A9DF4] to-cyan-500 text-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-32 px-6">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0b2a46] to-[#081a2c]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-[#2A9DF4] to-cyan-500"></div>
         <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-15"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_50%)]"></div>
         

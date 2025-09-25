@@ -5,14 +5,16 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Zap, Shield, Users, TrendingUp, Star, Play, BarChart3 } from "lucide-react";
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-[#0b2a46] to-[#081a2c] text-white overflow-hidden">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         {/* Background Images */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-[#2A9DF4] to-cyan-500"></div>
         <div className="absolute top-6 left-6 md:top-10 md:left-10 z-20">
           <img
             src="/graphics/thumbnail_image001.png"
@@ -21,7 +23,7 @@ export default function HomePage() {
           />
         </div>
         <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-25"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/15 via-[#2A9DF4]/10 to-[#1b6fb4]/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/25 via-[#2A9DF4]/20 to-[#1b6fb4]/20"></div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] bg-[url(/graphics/hero-waves.svg)] bg-bottom bg-cover opacity-60"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.15),transparent_50%)]"></div>
@@ -37,7 +39,7 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent leading-tight">
               Better Access, Better Care
               <br />
-              <span className="text-4xl md:text-5xl lg:text-6xl">Patient & Provider Workflows Automated</span>
+              <span className="text-3xl md:text-4xl lg:text-5xl">Patient & Provider Workflows Automated</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-12 leading-relaxed">
               Enterprise AI company that eliminates healthcare friction, reduces costs,

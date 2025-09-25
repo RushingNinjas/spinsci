@@ -5,13 +5,15 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, BarChart3, TrendingUp, Eye, Target, Brain, Zap, Database, PieChart } from "lucide-react";
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 export default function AIAnalyticsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-red-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-[#2A9DF4] to-cyan-500 text-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-32 px-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-orange-900 to-red-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-[#2A9DF4] to-cyan-500"></div>
         <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-15"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(249,115,22,0.15),transparent_50%)]"></div>
         
