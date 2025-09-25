@@ -425,11 +425,25 @@ export default function HomePage() {
                     >
                       <div className="w-8 h-8 bg-white rounded flex items-center justify-center mr-2">
                         {partner === "Cisco" ? (
-                          <img src="/logos/cisco.png" alt="Cisco" className="w-6 h-6 object-contain" />
+                          <img src="/logos/Cisco.jpeg" alt="Cisco" className="w-6 h-6 object-contain" />
                         ) : partner === "NICE CXOne" ? (
-                          <img src="/logos/nice-cxone.png" alt="NICE CXOne" className="w-6 h-6 object-contain" />
+                          <img src="/logos/NICECXOne.png" alt="NICE CXOne" className="w-6 h-6 object-contain" />
                         ) : partner === "Five9" ? (
-                          <img src="/logos/five9.png" alt="Five9" className="w-6 h-6 object-contain" />
+                          <img src="/logos/Five9.jpeg" alt="Five9" className="w-6 h-6 object-contain" />
+                        ) : partner === "Avaya" ? (
+                          <img src="/logos/avaya.jpeg" alt="Avaya" className="w-6 h-6 object-contain" />
+                        ) : partner === "Genesys" ? (
+                          <img src="/logos/genesys.jpeg" alt="Genesys" className="w-6 h-6 object-contain" />
+                        ) : partner === "Vonage" ? (
+                          <img src="/logos/vonage.png" alt="Vonage" className="w-6 h-6 object-contain" />
+                        ) : partner === "Zoom" ? (
+                          <img src="/logos/zoom.png" alt="Zoom" className="w-6 h-6 object-contain" />
+                        ) : partner === "RingCentral" ? (
+                          <img src="/logos/ringcentral.jpeg" alt="RingCentral" className="w-6 h-6 object-contain" />
+                        ) : partner === "8x8" ? (
+                          <img src="/logos/8x8.jpeg" alt="8x8" className="w-6 h-6 object-contain" />
+                        ) : partner === "Intermedia" ? (
+                          <img src="/logos/intermedia.jpeg" alt="Intermedia" className="w-6 h-6 object-contain" />
                         ) : (
                           <span className="text-[#2A9DF4] text-xs font-bold">{partner.charAt(0)}</span>
                         )}
