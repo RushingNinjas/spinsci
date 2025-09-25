@@ -193,6 +193,131 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SpinSci AI at Its Best Section */}
+      <section className="py-32 px-6 bg-gradient-to-br from-slate-800/30 via-[#2A9DF4]/10 to-slate-700/30 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              SpinSci AI at Its Best
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Two powerful AI components that work together to deliver intelligent healthcare automation at scale
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* BYOA Section */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#2A9DF4]/25 p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#2A9DF4]/10 via-blue-600/5 to-cyan-500/10 opacity-50"></div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors">
+                    BYOA
+                  </h3>
+                  <p className="text-blue-300 font-medium mb-4 text-lg">
+                    Bring Your Own Agentic Agent
+                  </p>
+                  <p className="text-blue-100 mb-6 leading-relaxed text-lg">
+                    Flexible AI agent integration that works with any CCaaS and UCaaS platform. 
+                    Deploy your existing AI agents or leverage SpinSci&apos;s proven agentic solutions 
+                    for seamless healthcare workflow automation.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Universal CCaaS Integration",
+                      "UCaaS Platform Compatibility", 
+                      "Custom Agent Deployment",
+                      "Seamless Workflow Automation"
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-center text-blue-200">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Brain Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-indigo-500/10 opacity-50"></div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <BarChart3 className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-purple-200 transition-colors">
+                    The Brain
+                  </h3>
+                  <p className="text-purple-300 font-medium mb-4 text-lg">
+                    MCP with Decision Tree Engine
+                  </p>
+                  <p className="text-blue-100 mb-6 leading-relaxed text-lg">
+                    Our intelligent MCP (Model Context Protocol) with advanced decision tree engine 
+                    connects seamlessly with all major EHRs to power patient access workflow automation, 
+                    clinical care automation, and PFS automation.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Universal EHR Integration",
+                      "Advanced Decision Tree Engine",
+                      "Patient Access Automation",
+                      "Clinical Care & PFS Automation"
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-center text-blue-200">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Integration Flow */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-16 text-center"
+          >
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded-full flex items-center justify-center">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <ArrowRight className="w-8 h-8 text-blue-300" />
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                <BarChart3 className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <p className="text-lg text-blue-200 max-w-2xl mx-auto">
+              BYOA agents work in perfect harmony with The Brain&apos;s decision tree engine, 
+              creating a unified AI ecosystem that delivers intelligent healthcare automation across all touchpoints.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why SpinSci Section */}
       <section className="py-32 px-6 bg-gradient-to-r from-[#2A9DF4]/20 via-blue-600/15 to-cyan-500/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
