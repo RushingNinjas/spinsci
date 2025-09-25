@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, Target, Heart, Award, Globe, Zap, Shield } from "lucide-react";
+import { ArrowRight, Users, Target, Heart, Award, Globe, Zap, Shield, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 
@@ -13,55 +13,64 @@ export default function AboutPage() {
       name: "Andy Asava",
       title: "Chief Executive Officer",
       bio: "The Strategist - Growth, Strategy, and Inspiration. Works closely with the Founder to improve cross functional business alignment and to achieve SpinSci's long-term vision. His core focus is 'value creation'.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/andy-asava.jpg",
+      linkedin: "https://linkedin.com/in/andy-asava" // Add real LinkedIn URL
     },
     {
       name: "Rajit Kumar",
       title: "Founder / Chief Innovation Officer",
       bio: "The Visionary - Transformational, Entrepreneurial, and Motivational. Since co-founding SpinSci in 2006, Rajit has transformed SpinSci from a service-based delivery organization into a true healthcare innovator with deep investments in patient engagement solutions.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/rajit-kumar.jpg",
+      linkedin: "https://linkedin.com/in/rajit-kumar" // Add real LinkedIn URL
     },
     {
       name: "Alice Liou",
       title: "Vice President of Finance & HR Ops",
       bio: "Finance and People Expert: Budgeting, Forecasting, Talent Acquisition and Workforce Planning. Specialist on financial analysis, strategic planning, budget preparation, team leadership and collaboration.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/alice-liou.jpg",
+      linkedin: "https://linkedin.com/in/alice-liou" // Add real LinkedIn URL
     },
     {
       name: "Doug Lang",
       title: "Senior Vice President of Services",
       bio: "COO | CCO | SaaS | CX | Customer Success. High-level executive responsible for leading and managing the service operations of SpinSci. With over 15 years of executive experience, he is a seasoned operational leader with a passion for customer success.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/doug-lang.jpg",
+      linkedin: "https://linkedin.com/in/doug-lang" // Add real LinkedIn URL
     },
     {
       name: "Ashvin Asava",
       title: "Chief Revenue Officer",
       bio: "Chief Revenue Officer - Sales Leadership, Sales Ops, and New Ventures. Moved into this position after his role as Vice President of Sales, showing his rapid trajectory at SpinSci. Has deep technical knowledge and strong understanding of healthcare provider challenges.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/ashvin-asava.jpg",
+      linkedin: "https://linkedin.com/in/ashvin-asava" // Add real LinkedIn URL
     },
     {
       name: "Rohit Potaraju",
       title: "Vice President of Product Management",
       bio: "The Product Leader - Roadmaps, Disruption and Excellence. Responsible for leading and developing the organization's expansive portfolio of solutions. Focuses on building impactful experiences in the Patient Engagement domain.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/rohit-potaraju.jpg",
+      linkedin: "https://linkedin.com/in/rohit-potaraju" // Add real LinkedIn URL
     },
     {
       name: "Cody Clark",
       title: "Vice President of Sales",
       bio: "Sales - Patient Journey, Relationships, and Execution. Thoroughly enjoys all aspects of meeting with customers, identifying areas where SpinSci can help, and providing a better healthcare experience for all involved.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/cody-clark.jpg",
+      linkedin: "https://linkedin.com/in/cody-clark" // Add real LinkedIn URL
     },
     {
       name: "Forrest Salsberry",
       title: "Vice President of Sales",
       bio: "Sales - Goal Attainment, Communication, and Relationships. Brings both B2B and healthcare experience to SpinSci. Has fostered deep relationships with customers and partners and strives to deliver excellent results.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/forrest-salsberry.jpg",
+      linkedin: "https://linkedin.com/in/forrest-salsberry" // Add real LinkedIn URL
     },
     {
       name: "John Hanson",
       title: "Vice President of Sales (North America)",
       bio: "Sales - Strategic, Leadership-Oriented, Revenue-Driven. Leads a team of direct and channel sales professionals who deliver innovative and advanced contact center solutions to clients across various industries.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=60"
+      image: "/leadership/john-hanson.jpg",
+      linkedin: "https://linkedin.com/in/john-hanson" // Add real LinkedIn URL
     }
   ];
 
@@ -210,9 +219,19 @@ export default function AboutPage() {
                       {leader.name}
                     </h3>
                     <p className="text-white font-semibold mb-4">{leader.title}</p>
-                    <p className="text-blue-100 text-sm leading-relaxed">
+                    <p className="text-blue-100 text-sm leading-relaxed mb-4">
                       {leader.bio}
                     </p>
+                    <div className="flex justify-center">
+                      <Link 
+                        href={leader.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110"
+                      >
+                        <Linkedin className="w-5 h-5 text-white" />
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
