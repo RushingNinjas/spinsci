@@ -70,7 +70,7 @@ export default function HomePage() {
               { number: "400M+", label: "Healthcare Interactions" },
               { number: "60M+", label: "Patients Served" },
               { number: "40%", label: "Cost Reduction" },
-              { number: "45s", label: "Ave. Time Saved Per Call" }
+                      { number: "160", label: "Customers" }
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
