@@ -209,7 +209,7 @@ export default function AboutPage() {
                     <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-200 transition-colors">
                       {leader.name}
                     </h3>
-                    <p className="text-[#2A9DF4] font-semibold mb-4">{leader.title}</p>
+                    <p className="text-white font-semibold mb-4">{leader.title}</p>
                     <p className="text-blue-100 text-sm leading-relaxed">
                       {leader.bio}
                     </p>
