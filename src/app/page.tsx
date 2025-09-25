@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-32 px-6 relative">
+      <section className="py-32 px-6 relative bg-gradient-to-br from-[#2A9DF4]/10 via-blue-600/5 to-cyan-500/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -151,7 +151,7 @@ export default function HomePage() {
                 className="group"
               >
                 <Link href={solution.link}>
-                  <Card className="relative overflow-hidden h-full bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+                  <Card className="relative overflow-hidden h-full bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#2A9DF4]/25 cursor-pointer">
                     {solution.imageUrl && (
                       <div
                         className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300"
@@ -194,7 +194,7 @@ export default function HomePage() {
       </section>
 
       {/* Why SpinSci Section */}
-      <section className="py-32 px-6 bg-gradient-to-r from-slate-800/50 to-blue-900/50 backdrop-blur-sm">
+      <section className="py-32 px-6 bg-gradient-to-r from-[#2A9DF4]/20 via-blue-600/15 to-cyan-500/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -250,7 +250,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="group"
               >
-                <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 h-full">
+                <div className="p-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl hover:bg-white/15 hover:border-white/30 transition-all duration-300 h-full">
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors">{item.title}</h3>
                   <p className="text-blue-100 leading-relaxed">{item.description}</p>
@@ -262,7 +262,7 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-32 px-6">
+      <section className="py-32 px-6 bg-gradient-to-br from-blue-600/10 via-[#2A9DF4]/5 to-indigo-600/10">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -271,10 +271,10 @@ export default function HomePage() {
             className="mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Trusted by Healthcare Leaders
+              Trusted by Leading CCaaS, UCaaS and EHR Vendors
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              The nation&apos;s most innovative health systems rely on SpinSci to deliver exceptional patient experiences
+              Leading technology partners trust SpinSci to deliver exceptional healthcare automation solutions
             </p>
           </motion.div>
 
@@ -290,7 +290,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="w-32 h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="w-32 h-16 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl flex items-center justify-center text-white font-semibold hover:bg-white/25 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#2A9DF4]/20"
               >
                 {partner}
               </motion.div>
@@ -300,7 +300,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-32 px-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm">
+      <section className="py-32 px-6 bg-gradient-to-r from-[#2A9DF4]/25 via-blue-600/20 to-cyan-500/25 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -331,7 +331,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6">
+      <section className="py-32 px-6 bg-gradient-to-br from-indigo-600/15 via-[#2A9DF4]/10 to-blue-600/15">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
