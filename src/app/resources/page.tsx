@@ -202,7 +202,7 @@ export default function ResourcesPage() {
                             onClick={() => window.open(item.downloadUrl, '_blank')}
                           >
                             <Download className="w-4 h-4 mr-2" />
-                            {item.type === &apos;Video&apos; ? &apos;Watch Now&apos; : &apos;Download&apos;}
+                            {item.type === 'Video' ? 'Watch Now' : 'Download'}
                           </Button>
                         </CardContent>
                       </Card>
