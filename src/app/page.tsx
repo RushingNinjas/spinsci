@@ -576,10 +576,10 @@ export default function HomePage() {
                         key={starIndex} 
                         className={`w-5 h-5 ${
                           starIndex < Math.floor(testimonial.rating) 
-                            ? &apos;text-yellow-400 fill-current&apos; 
+                            ? 'text-yellow-400 fill-current' 
                             : starIndex < testimonial.rating 
-                            ? &apos;text-yellow-400 fill-current opacity-50&apos; 
-                            : &apos;text-gray-400&apos;
+                            ? 'text-yellow-400 fill-current opacity-50' 
+                            : 'text-gray-400'
                         }`} 
                       />
                     ))}
