@@ -82,7 +82,7 @@ export default function ContactPage() {
               Get in Touch
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
-              Let's Transform Healthcare Together
+              Let&apos;s Transform Healthcare Together
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-12 leading-relaxed">
               Ready to revolutionize your healthcare operations? Our team of experts is here to help you implement AI-powered solutions that deliver exceptional patient experiences.
@@ -155,7 +155,7 @@ export default function ContactPage() {
               Send Us a Message
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Have a specific question or want to discuss your healthcare automation needs? We'd love to hear from you.
+              Have a specific question or want to discuss your healthcare automation needs? We&apos;d love to hear from you.
             </p>
           </motion.div>
 
@@ -310,7 +310,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
               Our team is committed to responding to all inquiries within 24 hours. For urgent matters, 
-              we're available via phone and live chat.
+              we&apos;re available via phone and live chat.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">

@@ -61,7 +61,7 @@ export default function Navigation() {
                       {/* Dropdown */}
                       <div
                         className={`absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
-                          solutionsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                          solutionsOpen ? &apos;opacity-100 visible&apos; : &apos;opacity-0 invisible&apos;
                         }`}
                         onMouseEnter={() => setSolutionsOpen(true)}
                         onMouseLeave={() => setSolutionsOpen(false)}

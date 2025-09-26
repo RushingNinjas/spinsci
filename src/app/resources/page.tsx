@@ -40,7 +40,7 @@ export default function ResourcesPage() {
       items: [
         {
           title: "Platform Demo - 5 Minutes",
-          description: "Quick overview of SpinSci's complete healthcare automation platform",
+          description: "Quick overview of SpinSci&apos;s complete healthcare automation platform",
           type: "Video",
           icon: <Play className="w-6 h-6" />,
           downloadUrl: "#"
@@ -159,7 +159,7 @@ export default function ResourcesPage() {
               Explore Our Resources
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Everything you need to understand, evaluate, and implement SpinSci's healthcare automation solutions
+              Everything you need to understand, evaluate, and implement SpinSci&apos;s healthcare automation solutions
             </p>
           </motion.div>
 
@@ -202,7 +202,7 @@ export default function ResourcesPage() {
                             onClick={() => window.open(item.downloadUrl, '_blank')}
                           >
                             <Download className="w-4 h-4 mr-2" />
-                            {item.type === 'Video' ? 'Watch Now' : 'Download'}
+                            {item.type === &apos;Video&apos; ? &apos;Watch Now&apos; : &apos;Download&apos;}
                           </Button>
                         </CardContent>
                       </Card>
@@ -227,7 +227,7 @@ export default function ResourcesPage() {
               Need More Information?
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our team is here to help with custom demos, detailed consultations, and personalized solutions.
+              Can&apos;t find what you&apos;re looking for? Our team is here to help with custom demos, detailed consultations, and personalized solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-white text-[#2A9DF4] hover:bg-blue-50 border-0 rounded-full shadow-2xl hover:shadow-white/25 transition-all duration-300 group">

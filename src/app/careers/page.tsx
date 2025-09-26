@@ -142,7 +142,7 @@ export default function CareersPage() {
               Why Work at SpinSci?
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              We're not just building software—we're revolutionizing healthcare. Join us in making a real difference in millions of lives.
+              We&apos;re not just building software—we&apos;re revolutionizing healthcare. Join us in making a real difference in millions of lives.
             </p>
           </motion.div>
 
@@ -262,12 +262,12 @@ export default function CareersPage() {
               </h2>
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
                 At SpinSci, we believe that the best healthcare technology is built by diverse teams who 
-                understand both the technical challenges and the human impact of what we're creating.
+                understand both the technical challenges and the human impact of what we&apos;re creating.
               </p>
               <p className="text-lg text-blue-100 mb-8 leading-relaxed">
                 We foster a culture of innovation, collaboration, and continuous learning. Every team member 
                 has a voice, and we encourage experimentation and calculated risk-taking to push the boundaries 
-                of what's possible in healthcare technology.
+                of what&apos;s possible in healthcare technology.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -311,10 +311,10 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Don't See Your Role?
+              Don&apos;t See Your Role?
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-              We're always looking for exceptional talent. Send us your resume and let us know how you'd like to contribute to transforming healthcare.
+              We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to transforming healthcare.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-white text-[#2A9DF4] hover:bg-blue-50 border-0 rounded-full shadow-2xl hover:shadow-white/25 transition-all duration-300 group">
