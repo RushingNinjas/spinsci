@@ -186,7 +186,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SpinSci AI at Its Best Section */}
+      {/* SpinSci AI Factory Section */}
       <section className="py-32 px-6 bg-gradient-to-br from-slate-800/30 via-[#2A9DF4]/10 to-slate-700/30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -196,7 +196,7 @@ export default function HomePage() {
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              SpinSci AI at Its Best
+              SpinSci AI Factory
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Two powerful AI components that work together to deliver intelligent healthcare automation at scale
