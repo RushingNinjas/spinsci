@@ -238,7 +238,7 @@ export default function HomePage() {
                       <li key={i} className="flex items-center text-blue-200">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
+          </li>
                     ))}
                   </ul>
                 </div>
@@ -279,7 +279,7 @@ export default function HomePage() {
                       <li key={i} className="flex items-center text-blue-200">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
+          </li>
                     ))}
                   </ul>
                 </div>
@@ -526,7 +526,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "Sometimes we're not very adaptive to new technologies, but our Nursing staff loved SpinSci and saw the value the minute we went live with it.",
+                quote: "Sometimes we&apos;re not very adaptive to new technologies, but our Nursing staff loved SpinSci and saw the value the minute we went live with it.",
                 rating: 4.5
               },
               {
@@ -534,15 +534,15 @@ export default function HomePage() {
                 rating: 5
               },
               {
-                quote: "Patients, customers were unhappy. We were able to take technology, integrate it, and now we're able to provide a completely different experience. Now when a patient calls in we know who's calling and why they're calling.",
+                quote: "Patients, customers were unhappy. We were able to take technology, integrate it, and now we&apos;re able to provide a completely different experience. Now when a patient calls in we know who&apos;s calling and why they&apos;re calling.",
                 rating: 5
               },
               {
-                quote: "Patients were unhappy. Now we're able to provide a completely different experience. Now when a patient calls, we know who's calling and why they're calling.",
+                quote: "Patients were unhappy. Now we&apos;re able to provide a completely different experience. Now when a patient calls, we know who&apos;s calling and why they&apos;re calling.",
                 rating: 5
               },
               {
-                quote: "We're able to decrease patient look-up time- it's provided real results to our hospital, it's provided real results to our customers, SpinSci is now a trusted advisor.",
+                quote: "We&apos;re able to decrease patient look-up time- it&apos;s provided real results to our hospital, it&apos;s provided real results to our customers, SpinSci is now a trusted advisor.",
                 rating: 5
               },
               {
@@ -576,10 +576,10 @@ export default function HomePage() {
                         key={starIndex} 
                         className={`w-5 h-5 ${
                           starIndex < Math.floor(testimonial.rating) 
-                            ? 'text-yellow-400 fill-current' 
+                            ? &apos;text-yellow-400 fill-current&apos; 
                             : starIndex < testimonial.rating 
-                            ? 'text-yellow-400 fill-current opacity-50' 
-                            : 'text-gray-400'
+                            ? &apos;text-yellow-400 fill-current opacity-50&apos; 
+                            : &apos;text-gray-400&apos;
                         }`} 
                       />
                     ))}
