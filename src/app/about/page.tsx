@@ -12,7 +12,7 @@ export default function AboutPage() {
     {
       name: "Andy Asava",
       title: "Chief Executive Officer",
-      bio: "The Strategist - Growth, Strategy, and Inspiration. Works closely with the Founder to improve cross functional business alignment and to achieve SpinSci's long-term vision. His core focus is 'value creation'.",
+      bio: "The Strategist - Growth, Strategy, and Inspiration. Works closely with the Founder to improve cross functional business alignment and to achieve SpinSci&apos;s long-term vision. His core focus is &apos;value creation&apos;.",
       image: "/leadership/andy-asava.jpg",
       linkedin: "https://linkedin.com/in/andy-asava" // Add real LinkedIn URL
     },
@@ -47,7 +47,7 @@ export default function AboutPage() {
     {
       name: "Rohit Potaraju",
       title: "Vice President of Product Management",
-      bio: "The Product Leader - Roadmaps, Disruption and Excellence. Responsible for leading and developing the organization's expansive portfolio of solutions. Focuses on building impactful experiences in the Patient Engagement domain.",
+      bio: "The Product Leader - Roadmaps, Disruption and Excellence. Responsible for leading and developing the organization&apos;s expansive portfolio of solutions. Focuses on building impactful experiences in the Patient Engagement domain.",
       image: "/leadership/rohit-potaraju.jpg",
       linkedin: "https://linkedin.com/in/rohit-potaraju" // Add real LinkedIn URL
     },
@@ -78,12 +78,12 @@ export default function AboutPage() {
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Patient-First",
-      description: "Every decision we make is guided by what's best for patients and their families."
+      description: "Every decision we make is guided by what&apos;s best for patients and their families."
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Innovation",
-      description: "We push the boundaries of what's possible in healthcare technology."
+      description: "We push the boundaries of what&apos;s possible in healthcare technology."
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -148,7 +148,7 @@ export default function AboutPage() {
               </p>
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
                 We set out to change that. By combining deep healthcare expertise with cutting-edge AI technology, 
-                we've created a platform that doesn't just automate processes—it transforms the entire healthcare 
+                we&apos;ve created a platform that doesn&apos;t just automate processes—it transforms the entire healthcare 
                 experience for everyone involved.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -355,7 +355,7 @@ export default function AboutPage() {
               Join Our Mission
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-              Ready to transform healthcare together? Let's discuss how SpinSci can help your organization deliver exceptional patient experiences.
+              Ready to transform healthcare together? Let&apos;s discuss how SpinSci can help your organization deliver exceptional patient experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-white text-[#2A9DF4] hover:bg-blue-50 border-0 rounded-full shadow-2xl hover:shadow-white/25 transition-all duration-300 group">
