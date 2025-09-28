@@ -35,8 +35,7 @@ export default function HomePage() {
               <span className="text-3xl md:text-4xl lg:text-5xl">Patient & Provider Workflows Automated</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Enterprise AI company that eliminates healthcare friction, reduces costs,
-              and delivers exceptional patient experiences at scale.
+              Enterprise AI company that eliminates healthcare friction, reduces costs, and delivers exceptional patient experiences at scale.
             </p>
           </motion.div>
 
@@ -108,9 +107,9 @@ export default function HomePage() {
               {
                 icon: <Users className="w-12 h-12" />,
                 title: "Patient Access Care",
-                subtitle: "AI-Powered Digital Front Door",
-                description: "Transform patient access with intelligent self-service, predictive scheduling, and seamless omni-channel experiences that reduce wait times by 70%.",
-                features: ["Smart Scheduling", "Predictive Triage", "Omni-Channel Support", "Real-time Analytics"],
+                subtitle: "Cut Down Time to Visit with AI Agents",
+                description: "Go beyond scheduling with end-to-end automation that handles the entire patient journey — from referral to refill — in one seamless experience.",
+                features: ["Automated scheduling", "Referral intake automation", "Prior-authorization automation", "Order-to-registration automation", "Faster retail & specialty pharmacy refills"],
                         gradient: "from-[#2A9DF4] to-[#1b6fb4]",
                 link: "/solutions/patient-access",
                 imageUrl: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=60"
@@ -119,8 +118,8 @@ export default function HomePage() {
                 icon: <Shield className="w-12 h-12" />,
                 title: "Clinical Communication",
                 subtitle: "Secure, Intelligent Workflows",
-                description: "Revolutionize clinical communication with AI-driven automation, secure messaging, and intelligent routing that ensures zero missed connections.",
-                features: ["Automated Switchboard", "Secure Messaging", "Code Workflows", "Provider On-Call"],
+                description: "Keep providers, nurses, and staff connected in real-time with secure, reliable communication with AI-driven automated Agents:",
+                features: ["Automated Operator Console", "Automated Transfer Center", "Code and on-call workflows", "CCaaS and EHR integrated", "No missed connections"],
                 gradient: "from-purple-500 to-pink-500",
                 link: "/solutions/clinical-communication",
                 imageUrl: "https://images.unsplash.com/photo-1578496781936-3881b47a0a1a?auto=format&fit=crop&w=1200&q=60"
@@ -129,8 +128,8 @@ export default function HomePage() {
                 icon: <TrendingUp className="w-12 h-12" />,
                 title: "Patient Financial Services",
                 subtitle: "Frictionless Payment Experience",
-                description: "Eliminate billing friction with intelligent payment orchestration, automated reconciliation, and personalized financial guidance that increases collections by 45%.",
-                features: ["Payment Orchestration", "EHR Reconciliation", "Smart Reminders", "Pause/Resume"],
+                description: "Improve patient payment collections with automated financial tools with AI agents for self-service and AI Assistance for high touch human touch in contact centers.",
+                features: ["Payment Orchestration", "EHR Reconciliation", "Eliminate PCI exposure", "Native EHR workflows", "CCaaS Enabled"],
                 gradient: "from-green-500 to-emerald-500",
                 link: "/solutions/financial-services",
                 imageUrl: "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&w=1200&q=60"
@@ -218,22 +217,20 @@ export default function HomePage() {
                     <Users className="w-10 h-10" />
                   </div>
                   <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors">
-                    BYOA
+                    The Bridge
                   </h3>
                   <p className="text-blue-300 font-medium mb-4 text-lg">
-                    Bring Your Own Agentic Agent
+                    Connect Any AI Agent
                   </p>
                   <p className="text-blue-100 mb-6 leading-relaxed text-lg">
-                    Flexible AI agent integration that works with any CCaaS and UCaaS platform. 
-                    Deploy your existing AI agents or leverage SpinSci&apos;s proven agentic solutions 
-                    for seamless healthcare workflow automation.
+                    Don&apos;t get locked into one AI platform. The Bridge lets you bring your own AI agents or use SpinSci&apos;s — seamlessly connecting them to healthcare workflows so you get more out of your existing investments.
                   </p>
                   <ul className="space-y-3">
                     {[
-                      "Universal CCaaS Integration",
-                      "UCaaS Platform Compatibility", 
-                      "Custom Agent Deployment",
-                      "Seamless Workflow Automation"
+                      "Works with any CCaaS & UCaaS platform",
+                      "Compatible with all major AI agents", 
+                      "Custom or SpinSci-proven agent deployment",
+                      "Seamless healthcare workflow integration"
                     ].map((feature, i) => (
                       <li key={i} className="flex items-center text-blue-200">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -262,19 +259,17 @@ export default function HomePage() {
                     The Brain
                   </h3>
                   <p className="text-purple-300 font-medium mb-4 text-lg">
-                    MCP with Decision Tree Engine
+                    Healthcare Intelligence Built In
                   </p>
                   <p className="text-blue-100 mb-6 leading-relaxed text-lg">
-                    Our intelligent MCP (Model Context Protocol) with advanced decision tree engine 
-                    connects seamlessly with all major EHRs to power patient access workflow automation, 
-                    clinical care automation, and PFS automation.
+                    AI agents are only as good as the data and rules they understand. The Brain comes preloaded with healthcare workflows, PHI access, and automation logic — making your AI safe, smart, and deployment-ready from day one.
                   </p>
                   <ul className="space-y-3">
                     {[
-                      "Universal EHR Integration",
-                      "Advanced Decision Tree Engine",
-                      "Patient Access Automation",
-                      "Clinical Care & PFS Automation"
+                      "Universal EHR integration",
+                      "Pre-packaged healthcare workflows",
+                      "Patient access, clinical, and financial automation",
+                      "Secure, scalable, and compliance-ready"
                     ].map((feature, i) => (
                       <li key={i} className="flex items-center text-blue-200">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -304,8 +299,9 @@ export default function HomePage() {
               </div>
             </div>
             <p className="text-lg text-blue-200 max-w-2xl mx-auto">
-              BYOA agents work in perfect harmony with The Brain&apos;s decision tree engine, 
-              creating a unified AI ecosystem that delivers intelligent healthcare automation across all touchpoints.
+              &quot;The Bridge connects. The Brain powers.&quot;
+              <br />
+              &quot;The Bridge + The Brain = the only AI ecosystem that unites any agent with healthcare intelligence for true end-to-end automation.&quot;
             </p>
           </motion.div>
         </div>
