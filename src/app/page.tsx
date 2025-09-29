@@ -45,9 +45,11 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-                    <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] hover:from-[#2191e8] hover:to-[#185f98] border-0 rounded-full shadow-2xl hover:shadow-[#2A9DF4]/25 transition-all duration-300 group">
-              <Play className="mr-2 w-5 h-5" />
-              Watch Demo
+                    <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] hover:from-[#2191e8] hover:to-[#185f98] border-0 rounded-full shadow-2xl hover:shadow-[#2A9DF4]/25 transition-all duration-300 group text-white" asChild>
+              <Link href="/contact" className="text-white">
+                <Play className="mr-2 w-5 h-5" />
+                Get Started
+              </Link>
             </Button>
           </motion.div>
 
@@ -610,12 +612,16 @@ export default function HomePage() {
               Join the healthcare revolution. See how SpinSci can transform your health system in just 30 days.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 border-0 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group">
-                Start Your Transformation
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 border-0 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group" asChild>
+                <Link href="/contact">
+                  Start Your Transformation
+                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="px-12 py-6 text-xl border-2 border-white/30 text-white hover:bg-white/10 rounded-full backdrop-blur-sm">
-                Schedule a Demo
+              <Button variant="outline" size="lg" className="px-12 py-6 text-xl border-2 border-white/30 text-white hover:bg-white/10 hover:text-white rounded-full backdrop-blur-sm" asChild>
+                <Link href="/contact" className="text-white hover:text-white">
+                  Schedule a Demo
+                </Link>
               </Button>
             </div>
           </motion.div>
