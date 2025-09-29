@@ -13,14 +13,14 @@ export default function ContactPage() {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Us",
       description: "Get in touch with our team",
-      contact: "hello@spinsci.com",
+      contact: "sales@spinsci.com",
       action: "Send Email"
     },
     {
       icon: <Phone className="w-8 h-8" />,
       title: "Call Us",
       description: "Speak with a solutions expert",
-      contact: "+1 (555) 123-4567",
+      contact: "972-891-8656",
       action: "Call Now"
     },
     {
@@ -41,22 +41,10 @@ export default function ContactPage() {
 
   const offices = [
     {
-      city: "San Francisco",
-      address: "123 Market Street, Suite 400",
-      zip: "San Francisco, CA 94105",
-      phone: "+1 (555) 123-4567"
-    },
-    {
-      city: "New York",
-      address: "456 Broadway, Floor 12",
-      zip: "New York, NY 10013",
-      phone: "+1 (555) 987-6543"
-    },
-    {
-      city: "Remote",
-      address: "Global Remote Team",
-      zip: "15+ Countries",
-      phone: "hello@spinsci.com"
+      city: "Dallas",
+      address: "14850 Quorum Dr., Suite 325",
+      zip: "Dallas, TX 75254",
+      phone: "972-891-8656"
     }
   ];
 

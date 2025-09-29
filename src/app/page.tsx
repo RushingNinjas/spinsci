@@ -3,11 +3,27 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Zap, Shield, Users, TrendingUp, Star, Play, BarChart3 } from "lucide-react";
+import { ArrowRight, CheckCircle, Zap, Shield, Users, TrendingUp, Star, Play, BarChart3, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-[#0b2a46] to-[#081a2c] text-white overflow-hidden">
       <Navigation />
@@ -319,43 +335,43 @@ export default function HomePage() {
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Why Healthcare Leaders Choose SpinSci
+              Why Healthcare Leaders Trust SpinSci
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Built by healthcare veterans, powered by cutting-edge AI, trusted by the industry&apos;s most innovative health systems
+              Driven by culture. Powered by passion. Proven at scale.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Deep Healthcare DNA",
-                description: "Founded by healthcare veterans with 20+ years of experience building solutions that actually work in real clinical environments.",
-                icon: "🏥"
+                title: "Innovation in Our DNA",
+                description: "At SpinSci, innovation isn’t an initiative — it’s who we are. Our culture fuels ideas that transform into solutions designed for real-world healthcare impact.",
+                icon: "🧬"
               },
               {
-                title: "Proven at Scale",
-                description: "Processing 400M+ healthcare interactions annually, touching 60M+ patients across the nation&apos;s leading health systems.",
-                icon: "📊"
+                title: "People Who Power Perfection",
+                description: "We empower our people, and their passion drives relentless pursuit of better outcomes — for health systems, providers, and patients.",
+                icon: "🌟"
               },
               {
-                title: "Universal Integration",
-                description: "Native integrations with Epic, Cerner, athenahealth, and all major CCaaS platforms. Deploy in weeks, not months.",
-                icon: "🔗"
-              },
-              {
-                title: "AI That Delivers",
-                description: "Our proprietary AI engine focuses on measurable outcomes: reduced costs, improved satisfaction, and better clinical outcomes.",
+                title: "AI With Purpose",
+                description: "Our AI isn’t about buzzwords — it’s about measurable value. We focus on reducing costs, improving patient satisfaction, and delivering better clinical results.",
                 icon: "🤖"
               },
               {
-                title: "Enterprise Ready",
-                description: "Backed by leading healthcare investors and innovation partners. Built for enterprise scale with 99.9% uptime guarantee.",
-                icon: "🏢"
+                title: "Scale That Matters",
+                description: "400M+ healthcare interactions processed annually, reaching 60M+ patients across the nation’s leading health systems.",
+                icon: "📈"
               },
               {
-                title: "Future-Proof Platform",
-                description: "Continuously evolving AI capabilities that adapt to changing healthcare needs and regulatory requirements.",
+                title: "Backed by Experts Who Live Healthcare",
+                description: "Supported by healthcare-focused investors and innovation partners who share our mission to reimagine what’s possible.",
+                icon: "👩‍⚕️"
+              },
+              {
+                title: "Future-Proofed for What’s Next",
+                description: "Continuously evolving AI capabilities that adapt to new regulations, shifting patient needs, and emerging technologies.",
                 icon: "🚀"
               }
             ].map((item, i) => (
@@ -394,8 +410,8 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Three Partner Categories */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          {/* Partner Categories */}
+          <div className="grid lg:grid-cols-4 gap-8">
             {/* Strategic Partners */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -500,6 +516,34 @@ export default function HomePage() {
                 </div>
               </div>
             </motion.div>
+
+            {/* Portfolio Companies */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="group"
+            >
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 h-full">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Portfolio Companies</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {["eHealth", "Persivia", "TimeDoc", "Rhythym"].map((company, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: i * 0.05 }}
+                      className="bg-white/20 rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded flex items-center justify-center mr-2">
+                        <span className="text-white text-xs font-bold">{company.charAt(0)}</span>
+                      </div>
+                      <span className="text-white text-xs font-medium">{company}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -517,47 +561,41 @@ export default function HomePage() {
               What Our Clients Are Saying
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Real feedback from healthcare leaders who have transformed their operations with SpinSci
+              Real feedback from healthcare leaders who have transformed their operations with SpinSci.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "Sometimes we&apos;re not very adaptive to new technologies, but our Nursing staff loved SpinSci and saw the value the minute we went live with it.",
-                rating: 4.5
+                quote: "Sometimes we’re not very adaptive to new technologies, but our nursing staff loved SpinSci and saw the value the minute we went live with it.",
+                rating: 5,
+                source: "Midwest Hospital, ACO – Epic EHR"
               },
               {
                 quote: "SpinSci has allowed us 6 more hours per day to really get the patient experience right. Losing that call could really be their life.",
-                rating: 5
+                rating: 5,
+                source: "Southeast – FQHC – Epic EHR"
               },
               {
-                quote: "Patients, customers were unhappy. We were able to take technology, integrate it, and now we&apos;re able to provide a completely different experience. Now when a patient calls in we know who&apos;s calling and why they&apos;re calling.",
-                rating: 5
+                quote: "Patients were unhappy. We were able to take technology, integrate it, and now we’re able to provide a completely different experience. Now when a patient calls, we know who’s calling and why.",
+                rating: 5,
+                source: "South – CDO – Oracle Health"
               },
               {
-                quote: "Patients were unhappy. Now we&apos;re able to provide a completely different experience. Now when a patient calls, we know who&apos;s calling and why they&apos;re calling.",
-                rating: 5
+                quote: "We’ve been able to decrease patient lookup time — SpinSci provided real results for our hospital. They’re now a trusted advisor.",
+                rating: 5,
+                source: "Northeast – Community Health System – athenahealth"
               },
               {
-                quote: "We&apos;re able to decrease patient look-up time- it&apos;s provided real results to our hospital, it&apos;s provided real results to our customers, SpinSci is now a trusted advisor.",
-                rating: 5
+                quote: "When a patient calls, the technology recognizes the phone number and automatically opens the correct EHR. After implementation, we saved about 43 seconds per call.",
+                rating: 4,
+                source: "West Coast – IDN – NextGen"
               },
               {
-                quote: "When a patient calls the technology recognizes the phone number of the patient which then automatically opens the correct EHR, after the implementation we saved about 43 seconds per call.",
-                rating: 4
-              },
-              {
-                quote: "This technology has allowed us 6 more hours in our day to really get the (patient) experience right. Losing that call could really be their life.",
-                rating: 4.5
-              },
-              {
-                quote: "SpinSci was flexible with the implementation allowing us to quickly stand up a pilot. They were very creative and provided a great effort for a customized solution. They really stepped up for us.",
-                rating: 5
-              },
-              {
-                quote: "Our contact center agents used to work in 11 screens, we now have that down to 1 operator console thanks to SpinSci. It also provided a higher level of personal experience.",
-                rating: 4
+                quote: "Our contact center agents used to work in 11 screens, now we have that down to 1 operator console thanks to SpinSci. It’s also provided a higher level of personal experience.",
+                rating: 5,
+                source: "Texas – Academic Medical Center – Epic EHR"
               }
             ].map((testimonial, i) => (
               <motion.div
@@ -586,9 +624,9 @@ export default function HomePage() {
                     &quot;{testimonial.quote}&quot;
                   </blockquote>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto">
-                      {String.fromCharCode(65 + i)}
-                    </div>
+                    {testimonial.source && (
+                      <p className="text-blue-300 text-sm">{testimonial.source}</p>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -611,16 +649,11 @@ export default function HomePage() {
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
               Join the healthcare revolution. See how SpinSci can transform your health system in just 30 days.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex justify-center">
               <Button size="lg" className="px-12 py-6 text-xl bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 border-0 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group" asChild>
                 <Link href="/contact">
                   Start Your Transformation
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="px-12 py-6 text-xl border-2 border-white/30 text-white hover:bg-white/10 hover:text-white rounded-full backdrop-blur-sm" asChild>
-                <Link href="/contact" className="text-white hover:text-white">
-                  Schedule a Demo
                 </Link>
               </Button>
             </div>
@@ -634,17 +667,28 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">SpinSci</h3>
-              <p className="text-blue-200 text-lg leading-relaxed mb-6">
-                The AI-powered platform that&apos;s transforming healthcare access, communication, and financial services for health systems nationwide.
-              </p>
-              <div className="flex space-x-4">
-                <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10">
-                  Request Demo
-                </Button>
-                <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10">
-                  Contact Sales
-                </Button>
-              </div>
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://spinsci.com/eula/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">
+                    EULA
+                  </a>
+                </li>
+                <li>
+                  <a href="https://spinsci.com/spinsci-healthcare-privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://spinsci.com/spinsci-healthcare-posh-policy/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">
+                    PoSH Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://trust.spinsci.com" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">
+                    Security Policy
+                  </a>
+                </li>
+              </ul>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-6 text-lg">Solutions</h4>
@@ -664,11 +708,31 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 text-center">
-            <p className="text-blue-300">© {new Date().getFullYear()} SpinSci. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <div className="border-t border-white/10 pt-8 text-center space-y-3">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center text-blue-300 text-sm">
+              <a href="https://spinsci.com/eula/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">EULA</a>
+              <span className="hidden sm:inline">•</span>
+              <a href="https://spinsci.com/spinsci-healthcare-privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">Privacy Policy</a>
+              <span className="hidden sm:inline">•</span>
+              <a href="https://spinsci.com/spinsci-healthcare-posh-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">PoSH Policy</a>
+            </div>
+            <p className="text-blue-300">© {new Date().getFullYear()} SpinSci. All rights reserved.</p>
           </div>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] hover:from-[#2191e8] hover:to-[#185f98] text-white rounded-full shadow-2xl hover:shadow-[#2A9DF4]/25 transition-all duration-300 flex items-center justify-center group"
+        >
+          <ChevronUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform" />
+        </motion.button>
+      )}
     </div>
   );
 }
