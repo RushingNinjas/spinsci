@@ -43,16 +43,33 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
-      {/* Journey image (drop-in) */}
-      <section className="px-6 pb-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/5 to-white/0 shadow-2xl shadow-black/30">
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_70%_0%,rgba(42,157,244,0.15),transparent_40%)]" />
-            <img
-              src="/graphics/portfolio-journey.png"
-              alt="SpinSci Patient Journey and Partnered Offerings"
-              className="w-full h-auto"
-            />
+      {/* Journey image (impact) */}
+      <section className="relative py-10 px-6">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(100%_60%_at_50%_0%,rgba(32,122,199,0.25),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="rounded-[28px] overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.04] to-white/[0.02] shadow-[0_40px_120px_-20px_rgba(0,0,0,0.6)]">
+            <div className="relative p-3 md:p-6">
+              <div className="absolute -inset-10 bg-[radial-gradient(60%_60%_at_50%_50%,rgba(42,157,244,0.35),transparent_70%)] blur-3xl" />
+              <img
+                src="/graphics/portfolio-journey.png"
+                alt="SpinSci Patient Journey and Partnered Offerings"
+                className="relative z-10 w-full h-auto rounded-2xl shadow-2xl shadow-cyan-500/10"
+              />
+            </div>
+          </div>
+          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {k:"36%", l:"Faster time to treatment"},
+              {k:">$1M+", l:"Annual revenue lift"},
+              {k:"95%+", l:"Device connectivity"},
+              {k:">200", l:"Hospitals impacted"},
+            ].map((s)=> (
+              <div key={s.k} className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur p-5 text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">{s.k}</div>
+                <div className="text-blue-200 text-sm mt-1">{s.l}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
