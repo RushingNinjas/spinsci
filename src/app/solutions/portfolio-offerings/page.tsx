@@ -62,11 +62,13 @@ export default function PortfolioOfferingsPage() {
             {/* Soft gradient wash */}
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.85))]" />
             <div className="relative z-10 p-3 md:p-6 lg:p-8">
-              <img
-                src="/graphics/portfolio-journey.png"
-                alt="SpinSci Patient Journey and Partnered Offerings"
-                className="w-full h-auto rounded-xl shadow-xl"
-              />
+              <div className="mx-auto max-w-5xl">
+                <img
+                  src="/graphics/portfolio-journey.png"
+                  alt="SpinSci Patient Journey and Partnered Offerings"
+                  className="w-full h-auto rounded-xl shadow-xl ring-1 ring-slate-200/70 saturate-125 contrast-110"
+                />
+              </div>
             </div>
           </div>
           {/* Animated stats strip */}
@@ -155,8 +157,12 @@ export default function PortfolioOfferingsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
               >
-                <Card className="h-full bg-white/95 border-slate-200 hover:shadow-2xl transition-all shadow-md rounded-2xl">
-                  <CardContent className="p-7 text-slate-800">
+                <Card className="relative overflow-hidden h-full bg-white/95 border-slate-200 hover:shadow-2xl transition-all shadow-md rounded-2xl">
+                  {/* splash accents */}
+                  <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-gradient-to-br from-cyan-300/40 to-blue-400/30 blur-2xl" />
+                  <div className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-300/40 to-sky-400/30 blur-2xl" />
+                  <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_20%_10%,#0ea5e9_1px,transparent_1px)] bg-[length:18px_18px]" />
+                  <CardContent className="relative p-7 text-slate-800">
                     <div className="mb-4 flex items-start justify-between gap-4">
                       <h3 className="text-2xl font-semibold text-slate-900">{partner.title}</h3>
                       <a
