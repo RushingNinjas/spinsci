@@ -22,32 +22,43 @@ export default function PortfolioOfferingsPage() {
       </div>
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative py-28 px-6 overflow-hidden">
-        <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-20 -right-24 h-[28rem] w-[28rem] rounded-full bg-blue-600/10 blur-3xl" />
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
+      {/* Split Hero (radical reboot) */}
+      <section className="relative py-16 md:py-24 px-6">
+        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-[#2A9DF4]" />
-              <span className="text-sm text-blue-200">Solutions Portfolio</span>
+              <span className="text-sm text-blue-100">SpinSci Portfolio</span>
             </div>
-            <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
-              Portfolio Offerings
+            <h1 className="mt-5 text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-cyan-100 to-sky-200 bg-clip-text text-transparent">
+              Build Your End‑to‑End Care Capability
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              From Digital Front Door to RPM, we orchestrate a unified, outcomes-driven journey with SpinSci products and select partners.
+            <p className="mt-5 text-lg md:text-xl text-blue-100/95 leading-relaxed max-w-xl">
+              Compose a solution from proven modules: digital front door, referral intake, analytics, clinical comms, care coordination, and RPM.
             </p>
-            <div className="mt-10 flex gap-4 justify-center">
+            <div className="mt-8 flex gap-4">
               <Button className="px-8 py-4 text-lg bg-[#2A9DF4] hover:bg-[#2191e8] rounded-full shadow-xl shadow-cyan-500/10">
-                Talk to Solutions Team
+                Design My Portfolio
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link href="/">
+              <Link href="#blueprint">
                 <Button variant="outline" className="px-8 py-4 text-lg border-white/20 hover:bg-white/10 rounded-full text-white">
-                  Back to Home
+                  See Blueprint
                 </Button>
               </Link>
+            </div>
+          </motion.div>
+
+          {/* Compact vibrant image on right */}
+          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }}>
+            <div className="relative rounded-[22px] overflow-hidden border border-slate-200/60 bg-white/95 shadow-[0_30px_90px_-20px_rgba(2,6,23,0.45)]">
+              <div className="absolute inset-0 opacity-45 bg-[url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.9))]" />
+              <div className="relative z-10 p-4 md:p-6">
+                <div className="mx-auto max-w-2xl">
+                  <img src="/graphics/portfolio-journey.png" alt="SpinSci Portfolio Journey" className="w-full h-auto rounded-xl ring-1 ring-slate-200 saturate-125 contrast-110" />
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -95,12 +106,12 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
-      {/* Offerings by Partner */}
-      <section className="py-16 px-6">
+      {/* Portfolio Modules Grid (colorful) */}
+      <section className="py-6 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Best-in-class portfolio, measurable outcomes</h2>
-            <p className="mt-3 text-blue-200/90 max-w-3xl mx-auto">Select proven capabilities with deep EHR integration. Compose your portfolio to match goals and timelines.</p>
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Best‑in‑class capabilities. One integrated experience.</h2>
+            <p className="mt-3 text-blue-100/95 max-w-3xl mx-auto">Pick the modules you need today and expand over time—each with measurable outcomes and deep EHR integration.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -158,6 +169,8 @@ export default function PortfolioOfferingsPage() {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
               >
                 <Card className="relative overflow-hidden h-full bg-white/95 border-slate-200 hover:shadow-2xl transition-all shadow-md rounded-2xl">
+                  {/* colorful header stripe */}
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400" />
                   {/* splash accents */}
                   <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-gradient-to-br from-cyan-300/40 to-blue-400/30 blur-2xl" />
                   <div className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-300/40 to-sky-400/30 blur-2xl" />
@@ -191,8 +204,24 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
+      {/* Blueprint Timeline */}
+      <section id="blueprint" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-center text-2xl md:text-3xl font-semibold mb-10 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Blueprint to Live in 90 Days</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[{n:1,t:"Discover",d:"Prioritize use cases, success metrics, data sources"},{n:2,t:"Assemble",d:"Pick modules, integrate with EHR & comms"},{n:3,t:"Prove",d:"Pilot with ROI tracking, scale across service lines"}].map((s)=> (
+              <div key={s.n} className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur p-6 text-center">
+                <div className="mx-auto mb-3 h-10 w-10 rounded-full bg-[#2A9DF4]/20 text-[#2A9DF4] flex items-center justify-center font-bold">{s.n}</div>
+                <div className="text-white font-semibold">{s.t}</div>
+                <div className="text-blue-200 mt-1 text-sm">{s.d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-24 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Bring the Portfolio to Your Health System</h2>
