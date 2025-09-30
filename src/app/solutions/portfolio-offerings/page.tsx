@@ -51,19 +51,19 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
-      {/* Journey image (heroic presentation) */}
+      {/* Journey image (bright, light background) */}
       <section className="px-6 pb-4">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[28px] overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.05] to-white/[0.02] shadow-[0_60px_160px_-30px_rgba(0,0,0,0.7)]">
-            {/* Colored glows */}
-            <div className="absolute -inset-24 bg-[radial-gradient(60%_60%_at_20%_30%,rgba(42,157,244,0.25),transparent_60%),radial-gradient(50%_50%_at_80%_0%,rgba(99,102,241,0.22),transparent_60%)] blur-3xl" />
-            {/* Subtle grid */}
-            <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(0deg,rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] bg-[size:40px_40px]" />
+          <div className="relative rounded-[28px] overflow-hidden border border-slate-200 bg-white shadow-[0_50px_120px_-30px_rgba(2,6,23,0.25)]">
+            {/* Light background image */}
+            <div className="absolute inset-0 opacity-40 bg-[url('/graphics/hero-waves.svg')] bg-cover bg-center" />
+            {/* Soft vignette */}
+            <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(42,157,244,0.10),transparent_60%)]" />
             <div className="relative z-10 p-3 md:p-6 lg:p-8">
               <img
                 src="/graphics/portfolio-journey.png"
                 alt="SpinSci Patient Journey and Partnered Offerings"
-                className="w-full h-auto rounded-2xl shadow-2xl shadow-cyan-500/10"
+                className="w-full h-auto rounded-xl shadow-xl"
               />
             </div>
           </div>
@@ -81,10 +81,10 @@ export default function PortfolioOfferingsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="rounded-2xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] backdrop-blur p-5 text-center transition-colors"
+                className="rounded-2xl border border-slate-200 bg-white/90 hover:bg-white p-5 text-center transition-colors shadow-sm"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">{s.k}</div>
-                <div className="text-blue-200 text-sm mt-1">{s.l}</div>
+                <div className="text-3xl font-bold text-slate-900">{s.k}</div>
+                <div className="text-slate-600 text-sm mt-1">{s.l}</div>
               </motion.div>
             ))}
           </div>
@@ -153,24 +153,24 @@ export default function PortfolioOfferingsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
               >
-                <Card className="h-full bg-white/5 border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors shadow-xl shadow-black/20 rounded-2xl">
-                  <CardContent className="p-7">
+                <Card className="h-full bg-white border-slate-200 hover:shadow-xl transition-all shadow-md rounded-2xl">
+                  <CardContent className="p-7 text-slate-800">
                     <div className="mb-4 flex items-start justify-between gap-4">
-                      <h3 className="text-2xl font-semibold text-white">{partner.title}</h3>
+                      <h3 className="text-2xl font-semibold text-slate-900">{partner.title}</h3>
                       <a
                         href={partner.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs md:text-sm text-blue-200 hover:text-white underline decoration-transparent hover:decoration-white/40"
+                        className="text-xs md:text-sm text-[#2A9DF4] hover:text-[#1f86d6] underline decoration-transparent hover:decoration-[#1f86d6]/40"
                       >
                         {partner.url}
                       </a>
                     </div>
-                    <p className="text-blue-100/90 mb-5">{partner.tagline}</p>
+                    <p className="text-slate-600 mb-5">{partner.tagline}</p>
                     <div className="space-y-2">
                       {partner.bullets.map((b, j) => (
-                        <div key={j} className="flex gap-2 text-blue-200">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2A9DF4] inline-block" />
+                        <div key={j} className="flex gap-2 text-slate-700">
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#2A9DF4] inline-block" />
                           <span className="leading-relaxed">{b}</span>
                         </div>
                       ))}
