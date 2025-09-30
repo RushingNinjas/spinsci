@@ -49,18 +49,15 @@ export default function PortfolioOfferingsPage() {
             </div>
           </motion.div>
 
-          {/* Decorative visual (no large image) */}
+          {/* Compact vibrant image on right (restored) */}
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            <div className="relative rounded-[22px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-[0_40px_120px_-30px_rgba(0,0,0,0.6)] p-8">
-              <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-gradient-to-br from-cyan-400/40 to-violet-500/40 blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gradient-to-br from-teal-400/40 to-blue-500/40 blur-3xl" />
-              <div className="relative grid grid-cols-2 gap-4">
-                {["Front Door","Referral","Analytics","Comms","Care Coord","RPM"].map((t)=> (
-                  <div key={t} className="rounded-xl border border-white/15 bg-white/10 text-white px-4 py-6 text-center shadow-inner">
-                    <div className="text-sm opacity-80">Module</div>
-                    <div className="mt-1 text-lg font-semibold">{t}</div>
-                  </div>
-                ))}
+            <div className="relative rounded-[22px] overflow-hidden border border-slate-200/60 bg-white/95 shadow-[0_30px_90px_-20px_rgba(2,6,23,0.45)]">
+              <div className="absolute inset-0 opacity-45 bg-[url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.9))]" />
+              <div className="relative z-10 p-4 md:p-6">
+                <div className="mx-auto max-w-2xl">
+                  <img src="/graphics/portfolio-journey.png" alt="SpinSci Portfolio Journey" className="w-full h-auto rounded-xl ring-1 ring-slate-200 saturate-125 contrast-110" />
+                </div>
               </div>
             </div>
           </motion.div>
