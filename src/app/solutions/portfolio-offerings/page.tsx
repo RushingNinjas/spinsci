@@ -9,7 +9,15 @@ import { ArrowRight } from "lucide-react";
 
 export default function PortfolioOfferingsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen relative text-white">
+      {/* Ambient gradient mesh background */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1c] via-slate-900 to-[#06080f]" />
+        <div className="absolute -top-24 -left-32 h-[34rem] w-[34rem] rounded-full bg-cyan-500/15 blur-[120px]" />
+        <div className="absolute top-1/3 -right-24 h-[30rem] w-[30rem] rounded-full bg-indigo-600/20 blur-[120px]" />
+        <div className="absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-blue-400/10 blur-[100px]" />
+        <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:18px_18px]" />
+      </div>
       <Navigation />
 
       {/* Hero */}
@@ -43,32 +51,41 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
-      {/* Journey image (impact) */}
-      <section className="relative py-10 px-6">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(100%_60%_at_50%_0%,rgba(32,122,199,0.25),transparent_60%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="rounded-[28px] overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.04] to-white/[0.02] shadow-[0_40px_120px_-20px_rgba(0,0,0,0.6)]">
-            <div className="relative p-3 md:p-6">
-              <div className="absolute -inset-10 bg-[radial-gradient(60%_60%_at_50%_50%,rgba(42,157,244,0.35),transparent_70%)] blur-3xl" />
+      {/* Journey image (heroic presentation) */}
+      <section className="px-6 pb-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative rounded-[28px] overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.05] to-white/[0.02] shadow-[0_60px_160px_-30px_rgba(0,0,0,0.7)]">
+            {/* Colored glows */}
+            <div className="absolute -inset-24 bg-[radial-gradient(60%_60%_at_20%_30%,rgba(42,157,244,0.25),transparent_60%),radial-gradient(50%_50%_at_80%_0%,rgba(99,102,241,0.22),transparent_60%)] blur-3xl" />
+            {/* Subtle grid */}
+            <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(0deg,rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] bg-[size:40px_40px]" />
+            <div className="relative z-10 p-3 md:p-6 lg:p-8">
               <img
                 src="/graphics/portfolio-journey.png"
                 alt="SpinSci Patient Journey and Partnered Offerings"
-                className="relative z-10 w-full h-auto rounded-2xl shadow-2xl shadow-cyan-500/10"
+                className="w-full h-auto rounded-2xl shadow-2xl shadow-cyan-500/10"
               />
             </div>
           </div>
+          {/* Animated stats strip */}
           <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {k:"36%", l:"Faster time to treatment"},
-              {k:">$1M+", l:"Annual revenue lift"},
-              {k:"95%+", l:"Device connectivity"},
+              {k:">$1M+", l:"Annual revenue lift potential"},
+              {k:"95%+", l:"Device connectivity (RPM)"},
               {k:">200", l:"Hospitals impacted"},
-            ].map((s)=> (
-              <div key={s.k} className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur p-5 text-center">
+            ].map((s,i)=> (
+              <motion.div
+                key={s.k}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="rounded-2xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] backdrop-blur p-5 text-center transition-colors"
+              >
                 <div className="text-3xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">{s.k}</div>
                 <div className="text-blue-200 text-sm mt-1">{s.l}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -77,9 +94,9 @@ export default function PortfolioOfferingsPage() {
       {/* Offerings by Partner */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-10 text-center">
+          <div className="mb-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Best-in-class portfolio, measurable outcomes</h2>
-            <p className="mt-3 text-blue-200 max-w-3xl mx-auto">Each offering is selected for proven impact and deep EHR integration. Combine modules to match your roadmap.</p>
+            <p className="mt-3 text-blue-200/90 max-w-3xl mx-auto">Select proven capabilities with deep EHR integration. Compose your portfolio to match goals and timelines.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
