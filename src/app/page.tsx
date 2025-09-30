@@ -1166,7 +1166,7 @@ export default function HomePage() {
             <div>
               <h4 className="text-white font-semibold mb-6 text-lg">Solutions</h4>
               <ul className="space-y-3">
-                {["Patient Access Care", "Clinical Communication", "Patient Financial Services", "SpinSci AI"].map((item, i) => (
+                {["Patient Access Care", "Clinical Communication", "Patient Financial Services", "SpinSci AI", "Portfolio Offerings"].map((item, i) => (
                   <li key={i} className="text-blue-200 hover:text-white transition-colors cursor-pointer">{item}</li>
                 ))}
               </ul>

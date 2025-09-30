@@ -18,7 +18,8 @@ export default function Navigation() {
         { name: "Patient Access Care", href: "/solutions/patient-access" },
         { name: "Clinical Communication", href: "/solutions/clinical-communication" },
         { name: "Financial Services", href: "/solutions/financial-services" },
-        { name: "AI Analytics", href: "/solutions/ai-analytics" }
+        { name: "SpinSci AI", href: "/solutions/ai-analytics" },
+        { name: "Portfolio Offerings", href: "/solutions/portfolio-offerings" }
       ]
     },
     { name: "Resources", href: "/resources" },
