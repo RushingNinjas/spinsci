@@ -186,6 +186,23 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
+      {/* Investment/Backer reference */}
+      <section className="px-6 py-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur p-4 text-center">
+            <span className="text-blue-100">Backed by </span>
+            <a
+              href="https://www.aldrichcap.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold underline decoration-transparent hover:decoration-white/50 hover:text-white"
+            >
+              Aldrich Capital Partners
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Blueprint Timeline */}
       <section id="blueprint" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
