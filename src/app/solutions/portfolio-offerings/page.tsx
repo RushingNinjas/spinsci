@@ -12,7 +12,7 @@ export default function PortfolioOfferingsPage() {
     <div className="min-h-screen relative text-white">
       {/* Ambient gradient + blended tech imagery */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e2a47] via-[#143a63] to-[#0b2140]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0b3b3b] via-[#144d7e] to-[#341b6f]" />
         {/* soft tech texture - unsplash */}
         <div className="absolute inset-0 opacity-30 mix-blend-overlay bg-[url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
         <div className="absolute -top-24 -left-32 h-[34rem] w-[34rem] rounded-full bg-cyan-400/25 blur-[120px]" />
@@ -49,60 +49,45 @@ export default function PortfolioOfferingsPage() {
             </div>
           </motion.div>
 
-          {/* Compact vibrant image on right */}
+          {/* Decorative visual (no large image) */}
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            <div className="relative rounded-[22px] overflow-hidden border border-slate-200/60 bg-white/95 shadow-[0_30px_90px_-20px_rgba(2,6,23,0.45)]">
-              <div className="absolute inset-0 opacity-45 bg-[url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.9))]" />
-              <div className="relative z-10 p-4 md:p-6">
-                <div className="mx-auto max-w-2xl">
-                  <img src="/graphics/portfolio-journey.png" alt="SpinSci Portfolio Journey" className="w-full h-auto rounded-xl ring-1 ring-slate-200 saturate-125 contrast-110" />
-                </div>
+            <div className="relative rounded-[22px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-[0_40px_120px_-30px_rgba(0,0,0,0.6)] p-8">
+              <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-gradient-to-br from-cyan-400/40 to-violet-500/40 blur-3xl" />
+              <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gradient-to-br from-teal-400/40 to-blue-500/40 blur-3xl" />
+              <div className="relative grid grid-cols-2 gap-4">
+                {["Front Door","Referral","Analytics","Comms","Care Coord","RPM"].map((t)=> (
+                  <div key={t} className="rounded-xl border border-white/15 bg-white/10 text-white px-4 py-6 text-center shadow-inner">
+                    <div className="text-sm opacity-80">Module</div>
+                    <div className="mt-1 text-lg font-semibold">{t}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Journey image (bright, light background with texture) */}
-      <section className="px-6 pb-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[28px] overflow-hidden border border-slate-200 bg-white/95 shadow-[0_50px_120px_-30px_rgba(2,6,23,0.25)]">
-            {/* Light tech image */}
-            <div className="absolute inset-0 opacity-45 bg-[url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
-            {/* Soft gradient wash */}
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.85))]" />
-            <div className="relative z-10 p-3 md:p-6 lg:p-8">
-              <div className="mx-auto max-w-5xl">
-                <img
-                  src="/graphics/portfolio-journey.png"
-                  alt="SpinSci Patient Journey and Partnered Offerings"
-                  className="w-full h-auto rounded-xl shadow-xl ring-1 ring-slate-200/70 saturate-125 contrast-110"
-                />
-              </div>
-            </div>
-          </div>
-          {/* Animated stats strip */}
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              {k:"36%", l:"Faster time to treatment"},
-              {k:">$1M+", l:"Annual revenue lift potential"},
-              {k:"95%+", l:"Device connectivity (RPM)"},
-              {k:">200", l:"Hospitals impacted"},
-            ].map((s,i)=> (
-              <motion.div
-                key={s.k}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="rounded-2xl border border-slate-200 bg-white/90 hover:bg-white p-5 text-center transition-colors shadow-sm"
-              >
-                <div className="text-3xl font-bold text-slate-900">{s.k}</div>
-                <div className="text-slate-600 text-sm mt-1">{s.l}</div>
-              </motion.div>
-            ))}
-          </div>
+      {/* Quick impact stats (no large image) */}
+      <section className="px-6 pb-6">
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {k:"36%", l:"Faster time to treatment"},
+            {k:">$1M+", l:"Annual revenue lift potential"},
+            {k:"95%+", l:"Device connectivity (RPM)"},
+            {k:">200", l:"Hospitals impacted"},
+          ].map((s,i)=> (
+            <motion.div
+              key={s.k}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur p-5 text-center"
+            >
+              <div className="text-3xl font-bold text-white">{s.k}</div>
+              <div className="text-blue-100 text-sm mt-1">{s.l}</div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
