@@ -1137,9 +1137,9 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-slate-900/50 backdrop-blur-sm border-t border-white/10 py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-white mb-4">SpinSci</h3>
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div>
+              <h3 className="text-white font-semibold mb-6 text-lg">SpinSci</h3>
               <ul className="space-y-3">
                 <li>
                   <a href="https://spinsci.com/eula/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">
@@ -1173,11 +1173,15 @@ export default function HomePage() {
             </div>
             <div>
               <h4 className="text-white font-semibold mb-6 text-lg">Connect</h4>
-              <ul className="space-y-3">
-                <li className="text-blue-200">info@spinsci.com</li>
-                <li className="text-blue-200">1-800-SPINSCI</li>
-                <li className="text-blue-200">Enterprise Support</li>
-                <li className="text-blue-200">Developer Portal</li>
+              <ul className="space-y-3 text-blue-200">
+                <li>14850 Quotum Dr., Ste 325</li>
+                <li>Dallas TX 75254</li>
+                <li>
+                  <a href="tel:+19728918656" className="hover:text-white transition-colors">972-891-8656</a>
+                </li>
+                <li>
+                  <a href="mailto:info@spinsci.com" className="hover:text-white transition-colors">info@spinsci.com</a>
+                </li>
               </ul>
             </div>
           </div>
