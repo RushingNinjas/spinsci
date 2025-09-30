@@ -28,14 +28,63 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-[#0b2a46] to-[#081a2c] text-white overflow-hidden">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-6">
-        {/* Background Images */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-[#2A9DF4] to-cyan-500"></div>
-        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-25"></div>
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/25 via-[#2A9DF4]/20 to-[#1b6fb4]/20"></div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] bg-[url(/graphics/hero-waves.svg)] bg-bottom bg-cover opacity-60"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.15),transparent_50%)]"></div>
+        
+        {/* Animated Gradient Orbs */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.2),transparent_60%)]"></div>
+        
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          animate={{ 
+            y: [0, -30, 0],
+            rotate: [0, 180, 360],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg opacity-60 blur-sm"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 40, 0],
+            rotate: [360, 180, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-40 right-20 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-50 blur-sm"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, -20, 0],
+            x: [0, 20, 0],
+            rotate: [0, 90, 0]
+          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-40 left-20 w-20 h-20 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full opacity-40 blur-sm"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 30, 0],
+            x: [0, -15, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-20 right-10 w-14 h-14 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-lg opacity-50 blur-sm"
+        />
+        
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
         
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.div
@@ -44,15 +93,57 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            {/* removed badge per request */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent leading-tight">
-              Better Access, Better Care
+            {/* Animated Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 rounded-full text-yellow-300 text-sm font-medium mb-8 backdrop-blur-sm"
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                className="w-4 h-4 mr-2"
+              >
+                ⚡
+              </motion.div>
+              AI-Powered Healthcare Revolution
+            </motion.div>
+            
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+            >
+              <motion.span
+                animate={{ 
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                className="bg-gradient-to-r from-white via-blue-100 via-cyan-200 to-indigo-200 bg-clip-text text-transparent bg-[length:200%_100%]"
+              >
+                Better Access, Better Care
+              </motion.span>
               <br />
-              <span className="text-3xl md:text-4xl lg:text-5xl">Patient & Provider Workflows Automated</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-12 leading-relaxed">
+              <motion.span 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent"
+              >
+                Patient & Provider Workflows Automated
+              </motion.span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-12 leading-relaxed"
+            >
               Enterprise AI company that eliminates healthcare friction, reduces costs, and delivers exceptional patient experiences at scale.
-            </p>
+            </motion.p>
           </motion.div>
 
           <motion.div
@@ -61,15 +152,25 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
-                    <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] hover:from-[#2191e8] hover:to-[#185f98] border-0 rounded-full shadow-2xl hover:shadow-[#2A9DF4]/25 transition-all duration-300 group text-white" asChild>
-              <Link href="/contact" className="text-white">
-                <Play className="mr-2 w-5 h-5" />
-                Get Started
-              </Link>
-            </Button>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 border-0 rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 group text-black font-bold" asChild>
+                <Link href="/contact" className="text-black">
+                  <motion.div
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Play className="mr-2 w-5 h-5" />
+                  </motion.div>
+                  Get Started
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
 
-          {/* Stats */}
+          {/* Animated Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,47 +178,169 @@ export default function HomePage() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             {[
-              { number: "400M+", label: "Healthcare Interactions" },
-              { number: "60M+", label: "Patients Served" },
-              { number: "40%", label: "Cost Reduction" },
-                      { number: "160", label: "Customers" }
+              { number: "400M+", label: "Healthcare Interactions", color: "from-blue-400 to-cyan-400" },
+              { number: "60M+", label: "Patients Served", color: "from-purple-400 to-pink-400" },
+              { number: "40%", label: "Cost Reduction", color: "from-emerald-400 to-teal-400" },
+              { number: "160", label: "Customers", color: "from-yellow-400 to-orange-400" }
             ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-blue-200 text-sm">{stat.label}</div>
-              </div>
+              <motion.div 
+                key={i} 
+                className="text-center group cursor-pointer"
+                whileHover={{ scale: 1.05, y: -5 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + i * 0.1 }}
+              >
+                <motion.div 
+                  className="relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300"
+                  whileHover={{ 
+                    boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
+                    borderColor: "rgba(59, 130, 246, 0.5)"
+                  }}
+                >
+                  <motion.div 
+                    className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                    animate={{ 
+                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    style={{ backgroundSize: "200% 100%" }}
+                  >
+                    {stat.number}
+                  </motion.div>
+                  <div className="text-blue-200 text-sm group-hover:text-white transition-colors">{stat.label}</div>
+                  
+                  {/* Animated background glow */}
+                  <motion.div
+                    className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl`}
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      opacity: [0, 0.1, 0]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </motion.div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
 
-        {/* Floating Elements */}
+        {/* Enhanced Floating Elements */}
         <motion.div
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"
+          animate={{ 
+            y: [0, -30, 0],
+            x: [0, 10, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 rounded-full blur-xl"
         />
         <motion.div
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-20 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"
+          animate={{ 
+            y: [0, 25, 0],
+            x: [0, -15, 0],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, -15, 0],
+            x: [0, 20, 0],
+            scale: [1, 0.8, 1]
+          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-5 w-16 h-16 bg-gradient-to-r from-emerald-500/25 to-teal-500/25 rounded-lg blur-lg"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 20, 0],
+            x: [0, -10, 0],
+            rotate: [0, 90, 0]
+          }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/3 right-5 w-24 h-24 bg-gradient-to-r from-yellow-500/25 to-orange-500/25 rounded-full blur-lg"
         />
       </section>
 
       {/* Solutions Section */}
-      <section className="py-32 px-6 relative bg-gradient-to-br from-[#2A9DF4]/8 via-blue-50/12 to-cyan-50/10">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-12"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/12 via-[#2A9DF4]/10 to-cyan-400/12"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/12 via-transparent to-white/12"></div>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <motion.div
+            animate={{ 
+              x: [0, 100, 0],
+              y: [0, -50, 0],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-2xl"
+          />
+          <motion.div
+            animate={{ 
+              x: [0, -80, 0],
+              y: [0, 60, 0],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl"
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              AI Enabled Healthcare Workflow Solutions
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-400/20 to-teal-500/20 border border-emerald-400/30 rounded-full text-emerald-300 text-sm font-medium mb-8 backdrop-blur-sm"
+            >
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                className="w-4 h-4 mr-2"
+              >
+                🚀
+              </motion.div>
+              AI-Powered Solutions
+            </motion.div>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-4xl md:text-6xl font-bold mb-6"
+            >
+              <motion.span
+                animate={{ 
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                className="bg-gradient-to-r from-white via-blue-100 via-cyan-200 to-blue-200 bg-clip-text text-transparent bg-[length:200%_100%]"
+              >
+                AI Enabled Healthcare Workflow Solutions
+              </motion.span>
+            </motion.h2>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl text-blue-100 max-w-3xl mx-auto"
+            >
               Three powerful platforms that work together to eliminate every point of friction in healthcare delivery
-            </p>
+            </motion.p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -155,45 +378,108 @@ export default function HomePage() {
             ].map((solution, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 transition={{ duration: 0.8, delay: i * 0.2 }}
                 className="group"
+                whileHover={{ y: -10 }}
               >
                 <Link href={solution.link}>
                   <Card className="relative overflow-hidden h-full bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#2A9DF4]/25 cursor-pointer">
+                    {/* Animated background gradient */}
+                    <motion.div
+                      className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                      animate={{ 
+                        backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"]
+                      }}
+                      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    />
+                    
                     {solution.imageUrl && (
-                      <div
+                      <motion.div
                         className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300"
                         style={{ backgroundImage: `url(${solution.imageUrl})` }}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <CardContent className="p-8">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${solution.gradient} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    
+                    <CardContent className="p-8 relative z-10">
+                      <motion.div 
+                        className={`w-16 h-16 bg-gradient-to-r ${solution.gradient} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      >
                         {solution.icon}
-                      </div>
-                      <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-blue-200 transition-colors">{solution.title}</h3>
-                      <p className="text-blue-300 font-medium mb-4">{solution.subtitle}</p>
+                      </motion.div>
+                      
+                      <motion.h3 
+                        className="text-2xl font-bold mb-2 text-white group-hover:text-blue-200 transition-colors"
+                        whileHover={{ x: 5 }}
+                      >
+                        {solution.title}
+                      </motion.h3>
+                      
+                      <motion.p 
+                        className="text-blue-300 font-medium mb-4"
+                        initial={{ opacity: 0.8 }}
+                        whileHover={{ opacity: 1 }}
+                      >
+                        {solution.subtitle}
+                      </motion.p>
+                      
                       <p className="text-blue-100 mb-6 leading-relaxed">{solution.description}</p>
+                      
                       <ul className="space-y-3">
                         {solution.features.map((feature, j) => (
-                          <li key={j} className="flex items-center text-blue-200">
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                          <motion.li 
+                            key={j} 
+                            className="flex items-center text-blue-200"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: j * 0.1 }}
+                            whileHover={{ x: 5, color: "#ffffff" }}
+                          >
+                            <motion.div
+                              whileHover={{ scale: 1.2, rotate: 360 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            </motion.div>
                             {feature}
-                          </li>
+                          </motion.li>
                         ))}
                       </ul>
-                      <div className="mt-6 space-y-2">
+                      
+                      <motion.div 
+                        className="mt-6 space-y-2"
+                        whileHover={{ y: -2 }}
+                      >
                         <div className="flex items-center text-blue-300 group-hover:text-white transition-colors">
                           <span className="text-sm font-medium">Learn More</span>
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          <motion.div
+                            whileHover={{ x: 5 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          </motion.div>
                         </div>
                         <div className="flex gap-4 text-sm">
-                          <span className="text-blue-300 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">Case Studies</span>
-                          <span className="text-blue-300 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">ROI Calculator</span>
+                          <motion.span 
+                            className="text-blue-300 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            Case Studies
+                          </motion.span>
+                          <motion.span 
+                            className="text-blue-300 hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            ROI Calculator
+                          </motion.span>
                         </div>
-                      </div>
+                      </motion.div>
                     </CardContent>
                   </Card>
                 </Link>
@@ -204,45 +490,151 @@ export default function HomePage() {
       </section>
 
       {/* SpinSci AI Factory Section */}
-      <section className="py-32 px-6 bg-gradient-to-br from-slate-800/30 via-[#2A9DF4]/10 to-slate-700/30 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-15"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/15 via-pink-400/12 to-indigo-500/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/15 via-transparent to-white/15"></div>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <motion.div
+            animate={{ 
+              x: [0, -100, 0],
+              y: [0, 50, 0],
+              rotate: [0, -180, -360]
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="absolute top-10 right-20 w-48 h-48 bg-gradient-to-r from-purple-400/15 to-pink-400/15 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{ 
+              x: [0, 120, 0],
+              y: [0, -40, 0],
+              scale: [1, 1.3, 1]
+            }}
+            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-10 left-20 w-36 h-36 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 rounded-full blur-3xl"
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              SpinSci AI Factory
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-400/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-8 backdrop-blur-sm"
+            >
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="w-4 h-4 mr-2"
+              >
+                ⚙️
+              </motion.div>
+              AI Factory Technology
+            </motion.div>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-4xl md:text-6xl font-bold mb-6"
+            >
+              <motion.span
+                animate={{ 
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                className="bg-gradient-to-r from-white via-purple-100 via-pink-200 to-blue-200 bg-clip-text text-transparent bg-[length:200%_100%]"
+              >
+                SpinSci AI Factory
+              </motion.span>
+            </motion.h2>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl text-blue-100 max-w-3xl mx-auto"
+            >
               Two powerful AI components that work together to deliver intelligent healthcare automation at scale
-            </p>
+            </motion.p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* BYOA Section */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -50, rotateY: -15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
               transition={{ duration: 0.8 }}
               className="group"
+              whileHover={{ y: -10, rotateY: 5 }}
             >
               <div className="relative overflow-hidden h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#2A9DF4]/25 p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#2A9DF4]/10 via-blue-600/5 to-cyan-500/10 opacity-50"></div>
+                {/* Animated background gradient */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-[#2A9DF4]/10 via-blue-600/5 to-cyan-500/10 opacity-50"
+                  animate={{ 
+                    backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"]
+                  }}
+                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                />
+                
+                {/* Floating particles */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -20, 0],
+                    opacity: [0.3, 0.7, 0.3]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full"
+                />
+                <motion.div
+                  animate={{ 
+                    y: [0, 15, 0],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-cyan-400 rounded-full"
+                />
+                
                 <div className="relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <motion.div 
+                    className="w-20 h-20 bg-gradient-to-r from-[#2A9DF4] to-[#1b6fb4] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <Users className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors">
+                  </motion.div>
+                  
+                  <motion.h3 
+                    className="text-3xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors"
+                    whileHover={{ x: 5 }}
+                  >
                     The Bridge
-                  </h3>
-                  <p className="text-blue-300 font-medium mb-4 text-lg">
+                  </motion.h3>
+                  
+                  <motion.p 
+                    className="text-blue-300 font-medium mb-4 text-lg"
+                    whileHover={{ scale: 1.02 }}
+                  >
                     Connect Any AI Agent
-                  </p>
+                  </motion.p>
+                  
                   <p className="text-blue-100 mb-6 leading-relaxed text-lg">
                     Don&apos;t get locked into one AI platform. The Bridge lets you bring your own AI agents or use SpinSci&apos;s — seamlessly connecting them to healthcare workflows so you get more out of your existing investments.
                   </p>
+                  
                   <ul className="space-y-3">
                     {[
                       "Works with any CCaaS & UCaaS platform",
@@ -250,10 +642,22 @@ export default function HomePage() {
                       "Custom or SpinSci-proven agent deployment",
                       "Seamless healthcare workflow integration"
                     ].map((feature, i) => (
-                      <li key={i} className="flex items-center text-blue-200">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <motion.li 
+                        key={i} 
+                        className="flex items-center text-blue-200"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                        whileHover={{ x: 5, color: "#ffffff" }}
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.2, rotate: 360 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        </motion.div>
                         {feature}
-          </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>
@@ -262,26 +666,67 @@ export default function HomePage() {
 
             {/* Brain Section */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 50, rotateY: 15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
               transition={{ duration: 0.8 }}
               className="group"
+              whileHover={{ y: -10, rotateY: -5 }}
             >
               <div className="relative overflow-hidden h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-indigo-500/10 opacity-50"></div>
+                {/* Animated background gradient */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-indigo-500/10 opacity-50"
+                  animate={{ 
+                    backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"]
+                  }}
+                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                />
+                
+                {/* Floating particles */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -25, 0],
+                    opacity: [0.4, 0.8, 0.4]
+                  }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-6 left-4 w-2.5 h-2.5 bg-purple-400 rounded-full"
+                />
+                <motion.div
+                  animate={{ 
+                    y: [0, 18, 0],
+                    opacity: [0.3, 0.7, 0.3]
+                  }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-pink-400 rounded-full"
+                />
+                
                 <div className="relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <motion.div 
+                    className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <BarChart3 className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-purple-200 transition-colors">
+                  </motion.div>
+                  
+                  <motion.h3 
+                    className="text-3xl font-bold mb-4 text-white group-hover:text-purple-200 transition-colors"
+                    whileHover={{ x: 5 }}
+                  >
                     The Brain
-                  </h3>
-                  <p className="text-purple-300 font-medium mb-4 text-lg">
+                  </motion.h3>
+                  
+                  <motion.p 
+                    className="text-purple-300 font-medium mb-4 text-lg"
+                    whileHover={{ scale: 1.02 }}
+                  >
                     Healthcare Intelligence Built In
-                  </p>
+                  </motion.p>
+                  
                   <p className="text-blue-100 mb-6 leading-relaxed text-lg">
                     AI agents are only as good as the data and rules they understand. The Brain comes preloaded with healthcare workflows, PHI access, and automation logic — making your AI safe, smart, and deployment-ready from day one.
                   </p>
+                  
                   <ul className="space-y-3">
                     {[
                       "Universal EHR integration",
@@ -289,10 +734,22 @@ export default function HomePage() {
                       "Patient access, clinical, and financial automation",
                       "Secure, scalable, and compliance-ready"
                     ].map((feature, i) => (
-                      <li key={i} className="flex items-center text-blue-200">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <motion.li 
+                        key={i} 
+                        className="flex items-center text-blue-200"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                        whileHover={{ x: 5, color: "#ffffff" }}
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.2, rotate: 360 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        </motion.div>
                         {feature}
-          </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>
@@ -326,8 +783,12 @@ export default function HomePage() {
       </section>
 
       {/* Why SpinSci Section */}
-      <section className="py-32 px-6 bg-gradient-to-r from-[#2A9DF4]/20 via-blue-600/15 to-cyan-500/20 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-12"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/15 via-blue-500/12 to-cyan-400/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-white/12"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -394,8 +855,12 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-32 px-6 bg-gradient-to-br from-blue-600/10 via-[#2A9DF4]/5 to-indigo-600/10">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-8"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-[#2A9DF4]/8 to-indigo-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10"></div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -549,8 +1014,12 @@ export default function HomePage() {
       </section>
 
       {/* What Our Clients Are Saying Section */}
-      <section className="py-32 px-6 bg-gradient-to-r from-[#2A9DF4]/25 via-blue-600/20 to-cyan-500/25 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/18 via-blue-500/15 to-cyan-400/18"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-white/12"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -636,8 +1105,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 bg-gradient-to-br from-indigo-600/15 via-[#2A9DF4]/10 to-blue-600/15">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-12"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/12 via-[#2A9DF4]/10 to-blue-500/12"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/12 via-transparent to-white/12"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

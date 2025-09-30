@@ -37,13 +37,18 @@ export default function PatientAccessPage() {
               Transform patient access with intelligent self-service, predictive scheduling, and seamless omni-channel experiences that reduce wait times by 70% and increase patient satisfaction by 45%.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 border-0 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group">
+              <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 border-0 rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 group">
                 Request Demo
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg border-2 border-white/30 text-white hover:bg-white/10 rounded-full backdrop-blur-sm">
+              <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 border-0 rounded-full shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300">
                 View Case Studies
               </Button>
+              <Link href="/resources">
+                <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-600 hover:to-fuchsia-700 border-0 rounded-full shadow-2xl hover:shadow-fuchsia-500/25 transition-all duration-300">
+                  ROI Analysis
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
