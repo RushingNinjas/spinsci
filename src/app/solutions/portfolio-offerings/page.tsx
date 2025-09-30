@@ -10,13 +10,15 @@ import { ArrowRight } from "lucide-react";
 export default function PortfolioOfferingsPage() {
   return (
     <div className="min-h-screen relative text-white">
-      {/* Ambient gradient mesh background */}
+      {/* Ambient gradient + blended tech imagery */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1c] via-slate-900 to-[#06080f]" />
-        <div className="absolute -top-24 -left-32 h-[34rem] w-[34rem] rounded-full bg-cyan-500/15 blur-[120px]" />
-        <div className="absolute top-1/3 -right-24 h-[30rem] w-[30rem] rounded-full bg-indigo-600/20 blur-[120px]" />
-        <div className="absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-blue-400/10 blur-[100px]" />
-        <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:18px_18px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e2a47] via-[#143a63] to-[#0b2140]" />
+        {/* soft tech texture - unsplash */}
+        <div className="absolute inset-0 opacity-30 mix-blend-overlay bg-[url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
+        <div className="absolute -top-24 -left-32 h-[34rem] w-[34rem] rounded-full bg-cyan-400/25 blur-[120px]" />
+        <div className="absolute top-1/3 -right-24 h-[30rem] w-[30rem] rounded-full bg-sky-500/25 blur-[120px]" />
+        <div className="absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-indigo-400/20 blur-[100px]" />
+        <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:18px_18px]" />
       </div>
       <Navigation />
 
@@ -51,14 +53,14 @@ export default function PortfolioOfferingsPage() {
         </div>
       </section>
 
-      {/* Journey image (bright, light background) */}
+      {/* Journey image (bright, light background with texture) */}
       <section className="px-6 pb-4">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[28px] overflow-hidden border border-slate-200 bg-white shadow-[0_50px_120px_-30px_rgba(2,6,23,0.25)]">
-            {/* Light background image */}
-            <div className="absolute inset-0 opacity-40 bg-[url('/graphics/hero-waves.svg')] bg-cover bg-center" />
-            {/* Soft vignette */}
-            <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(42,157,244,0.10),transparent_60%)]" />
+          <div className="relative rounded-[28px] overflow-hidden border border-slate-200 bg-white/95 shadow-[0_50px_120px_-30px_rgba(2,6,23,0.25)]">
+            {/* Light tech image */}
+            <div className="absolute inset-0 opacity-45 bg-[url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2100&auto=format&fit=crop')] bg-cover bg-center" />
+            {/* Soft gradient wash */}
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.85))]" />
             <div className="relative z-10 p-3 md:p-6 lg:p-8">
               <img
                 src="/graphics/portfolio-journey.png"
@@ -153,7 +155,7 @@ export default function PortfolioOfferingsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
               >
-                <Card className="h-full bg-white border-slate-200 hover:shadow-xl transition-all shadow-md rounded-2xl">
+                <Card className="h-full bg-white/95 border-slate-200 hover:shadow-2xl transition-all shadow-md rounded-2xl">
                   <CardContent className="p-7 text-slate-800">
                     <div className="mb-4 flex items-start justify-between gap-4">
                       <h3 className="text-2xl font-semibold text-slate-900">{partner.title}</h3>
@@ -166,7 +168,7 @@ export default function PortfolioOfferingsPage() {
                         {partner.url}
                       </a>
                     </div>
-                    <p className="text-slate-600 mb-5">{partner.tagline}</p>
+                    <p className="text-slate-700 mb-5">{partner.tagline}</p>
                     <div className="space-y-2">
                       {partner.bullets.map((b, j) => (
                         <div key={j} className="flex gap-2 text-slate-700">
