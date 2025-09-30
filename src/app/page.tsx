@@ -1181,14 +1181,7 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 text-center space-y-3">
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center text-blue-300 text-sm">
-              <a href="https://spinsci.com/eula/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">EULA</a>
-              <span className="hidden sm:inline">•</span>
-              <a href="https://spinsci.com/spinsci-healthcare-privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">Privacy Policy</a>
-              <span className="hidden sm:inline">•</span>
-              <a href="https://spinsci.com/spinsci-healthcare-posh-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-transparent hover:decoration-white/40 transition-colors">PoSH Policy</a>
-            </div>
+          <div className="border-t border-white/10 pt-8 text-center">
             <p className="text-blue-300">© {new Date().getFullYear()} SpinSci. All rights reserved.</p>
           </div>
         </div>
