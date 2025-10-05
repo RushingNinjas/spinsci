@@ -667,6 +667,12 @@ export default function HomePage() {
                       </motion.li>
                     ))}
                   </ul>
+                  <div className="mt-6">
+                    <Link href="/solutions/ai-analytics" className="inline-flex items-center px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white text-sm">
+                      More Details
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -759,6 +765,12 @@ export default function HomePage() {
                       </motion.li>
                     ))}
                   </ul>
+                  <div className="mt-6">
+                    <Link href="/solutions/ai-analytics" className="inline-flex items-center px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white text-sm">
+                      More Details
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>
