@@ -782,77 +782,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why SpinSci Section */}
-      <section className="py-32 px-6 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-12"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/15 via-blue-500/12 to-cyan-400/15"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-white/12"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Why Healthcare Leaders Trust SpinSci
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Driven by culture. Powered by passion. Proven at scale.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Innovation in Our DNA",
-                description: "At SpinSci, innovation isn’t an initiative — it’s who we are. Our culture fuels ideas that transform into solutions designed for real-world healthcare impact.",
-                icon: "🧬"
-              },
-              {
-                title: "People Who Power Perfection",
-                description: "We empower our people, and their passion drives relentless pursuit of better outcomes — for health systems, providers, and patients.",
-                icon: "🌟"
-              },
-              {
-                title: "AI With Purpose",
-                description: "Our AI isn’t about buzzwords — it’s about measurable value. We focus on reducing costs, improving patient satisfaction, and delivering better clinical results.",
-                icon: "🤖"
-              },
-              {
-                title: "Scale That Matters",
-                description: "400M+ healthcare interactions processed annually, reaching 60M+ patients across the nation’s leading health systems.",
-                icon: "📈"
-              },
-              {
-                title: "Backed by Experts Who Live Healthcare",
-                description: "Supported by healthcare-focused investors and innovation partners who share our mission to reimagine what’s possible.",
-                icon: "👩‍⚕️"
-              },
-              {
-                title: "Future-Proofed for What’s Next",
-                description: "Continuously evolving AI capabilities that adapt to new regulations, shifting patient needs, and emerging technologies.",
-                icon: "🚀"
-              }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group"
-              >
-                <div className="p-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl hover:bg-white/15 hover:border-white/30 transition-all duration-300 h-full">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors">{item.title}</h3>
-                  <p className="text-blue-100 leading-relaxed">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/**
+       * Why SpinSci Section (temporarily disabled)
+       * To re-enable in future, remove this comment block.
+       *
+       * <section className="py-32 px-6 relative overflow-hidden">
+       *   <div className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=2100&q=60)] bg-cover bg-center opacity-12"></div>
+       *   <div className="absolute inset-0 bg-gradient-to-r from-[#2A9DF4]/15 via-blue-500/12 to-cyan-400/15"></div>
+       *   <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-white/12"></div>
+       *   <div className="max-w-7xl mx-auto relative z-10">
+       *     <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-20">
+       *       <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Why Healthcare Leaders Trust SpinSci</h2>
+       *       <p className="text-xl text-blue-100 max-w-3xl mx-auto">Driven by culture. Powered by passion. Proven at scale.</p>
+       *     </motion.div>
+       *     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+       *       {items.map((item, i) => (
+       *         <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.1 }} className="group">
+       *           <div className="p-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl hover:bg-white/15 hover:border-white/30 transition-all duration-300 h-full">
+       *             <div className="text-4xl mb-4">{item.icon}</div>
+       *             <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors">{item.title}</h3>
+       *             <p className="text-blue-100 leading-relaxed">{item.description}</p>
+       *           </div>
+       *         </motion.div>
+       *       ))}
+       *     </div>
+       *   </div>
+       * </section>
+       */}
 
       {/* Partners Section */}
       <section className="py-32 px-6 relative overflow-hidden">
