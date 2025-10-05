@@ -49,80 +49,51 @@ export default function AIAnalyticsPage() {
         </div>
       </section>
 
-      {/* SpinSci AI – Deep Structure: Bridge & Brain */}
-      <section className="py-24 px-6">
+      {/* SpinSci AI – Clean Narrative */}
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-3">SpinSci AI: The Bridge + The Brain</h2>
-            <p className="text-orange-100 max-w-3xl mx-auto">Two complementary pillars: connect any agent to healthcare workflows (The Bridge), and infuse healthcare intelligence and guardrails (The Brain).</p>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2">SpinSci AI: The Bridge + The Brain</h2>
+            <p className="text-orange-100 max-w-3xl mx-auto">Two pillars working as one. The Bridge connects any agent to real workflows. The Brain guides agents with healthcare intelligence and guardrails.</p>
           </div>
 
-          {/* Why AI Agents Are Different */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-            {[
-              {t:"Autonomy vs. Reactivity", d:"Agents plan, decide and act to achieve goals — not just respond to inputs.", icon:"🚀"},
-              {t:"Multi‑Step Reasoning", d:"Break down problems, think ahead and adapt like a digital project manager.", icon:"🧠"},
-              {t:"Tool & Data Orchestration", d:"Coordinate APIs, systems and streams like a conductor leading an orchestra.", icon:"🔗"},
-              {t:"Personalization at Scale", d:"Remember context, learn preferences and tailor actions per user/workflow.", icon:"👤"},
-              {t:"Continuous Improvement", d:"LLMs + feedback loops = smarter outcomes over time, automatically.", icon:"⚡"}
-            ].map((i) => (
-              <div key={i.t} className="p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur hover:bg-white/15 transition-colors">
-                <div className="text-2xl mb-2">{i.icon}</div>
-                <div className="text-lg font-semibold mb-1">{i.t}</div>
-                <div className="text-orange-100/90">{i.d}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Why our Bridge is better */}
-          <div className="mb-14">
-            <h3 className="text-3xl font-bold mb-4">Why Our Bridge Is Better</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {t:"Any‑Agent Connectivity",d:"Drop‑in for your preferred agent framework; BYO agents or use SpinSci’s."},
-                {t:"Healthcare‑Grade Adapters",d:"Prebuilt connectors for EHRs, CCaaS/UCaaS, CRMs, SFTP/HL7/FHIR, and queues."},
-                {t:"Event + Workflow Bus",d:"Turns agent intents into safe transactions with retries, idempotency, and audit."}
-              ].map((i)=> (
-                <div key={i.t} className="p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur">
-                  <div className="text-lg font-semibold mb-1">{i.t}</div>
-                  <div className="text-orange-100/90">{i.d}</div>
-                </div>
-              ))}
+          {/* Two-pillar overview (side-by-side) */}
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
+              <h3 className="text-2xl font-bold mb-2">The Bridge</h3>
+              <p className="text-orange-100/90 mb-4">Connect any agent to EHRs, CCaaS/UCaaS, CRMs and data. Normalize auth, events and APIs into safe workflow actions.</p>
+              <ul className="space-y-2 text-sm text-orange-100/90">
+                <li>• Any‑agent connectivity (BYO or SpinSci)</li>
+                <li>• Healthcare‑grade adapters (FHIR/HL7/SFTP, queues)</li>
+                <li>• Event + workflow bus (retries, idempotency, audit)</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
+              <h3 className="text-2xl font-bold mb-2">The Brain</h3>
+              <p className="text-orange-100/90 mb-4">Healthcare intelligence for agents: rules, retrieval, compliance, reasoning and optimization baked in.</p>
+              <ul className="space-y-2 text-sm text-orange-100/90">
+                <li>• Ontology + rules (access/clinical/financial)</li>
+                <li>• PHI‑aware retrieval and safety guardrails</li>
+                <li>• KPI optimization with feedback loops</li>
+              </ul>
             </div>
           </div>
 
-          {/* Why our Brain is better */}
-          <div className="mb-14">
-            <h3 className="text-3xl font-bold mb-4">Why Our Brain Is Better</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {t:"Healthcare Ontology + Rules",d:"Pre‑modeled clinical, access, and financial flows with policy/eligibility logic."},
-                {t:"PHI‑Aware Retrieval",d:"Safe data access, masking, and provenance; guardrails for regulated content."},
-                {t:"Outcome Optimization",d:"Feedback loops, A/B routing, and KPI targets (speed, revenue, satisfaction)."}
-              ].map((i)=> (
-                <div key={i.t} className="p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur">
-                  <div className="text-lg font-semibold mb-1">{i.t}</div>
-                  <div className="text-orange-100/90">{i.d}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Agents & Sub‑Agents – Bridge vs Brain */}
-          <div className="mb-16">
+          {/* Agents & Sub‑Agents (accordion) */}
+          <div className="mb-12">
             <h3 className="text-3xl font-bold mb-6">Agents & Sub‑Agents</h3>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Bridge agents */}
-              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur">
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold mb-3">The Bridge – Operational Agents</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
+              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-1">
+                <details className="rounded-2xl open:bg-white/5">
+                  <summary className="cursor-pointer list-none p-5 text-lg font-semibold">The Bridge – Operational Agents</summary>
+                  <div className="px-5 pb-5 grid md:grid-cols-2 gap-4">
                     {[
                       {title:"Scheduling Agents", items:["Patient Identification & Verification","Appointment Cancel","Appointment Confirm","Appointment Reschedule","Open Scheduling","Direct Scheduling","Ticket Scheduling","Prior‑Auth","Registration (Orders / Referral)"]},
                       {title:"Billing Agents", items:["Account Summary","Bill Pay","Payment Reconciliation","General Ledger"]},
                       {title:"Pharmacy Refill Agents", items:["Prescription Details","Prescription Order","Refill Reminder","Pickup Reminder","Benefits Management","Adherence Tracking"]}
                     ].map((c)=> (
-                      <div key={c.title} className="relative overflow-hidden rounded-xl bg-white/10 border border-white/20 p-5">
+                      <div key={c.title} className="relative overflow-hidden rounded-xl bg-white/10 border border-white/20 p-4">
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-400" />
                         <h5 className="font-semibold mb-2">{c.title}</h5>
                         <ul className="space-y-1 text-orange-100/90 text-sm">
@@ -133,13 +104,14 @@ export default function AIAnalyticsPage() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </details>
               </div>
 
               {/* Brain sub‑agents */}
-              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
-                <h4 className="text-xl font-semibold mb-3">The Brain – Intelligence Sub‑Agents</h4>
-                <ul className="grid md:grid-cols-2 gap-3 text-sm text-orange-100/90">
+              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-1">
+                <details className="rounded-2xl open:bg-white/5">
+                  <summary className="cursor-pointer list-none p-5 text-lg font-semibold">The Brain – Intelligence Sub‑Agents</summary>
+                  <ul className="px-5 pb-5 grid md:grid-cols-2 gap-3 text-sm text-orange-100/90">
                   {[
                     "Reasoning & Planning",
                     "Policy / Prior‑Auth Rules",
@@ -152,13 +124,14 @@ export default function AIAnalyticsPage() {
                   ].map((x)=> (
                     <li key={x} className="rounded-xl bg-white/10 border border-white/20 px-3 py-2">{x}</li>
                   ))}
-                </ul>
+                  </ul>
+                </details>
               </div>
             </div>
           </div>
 
           {/* Solution Architecture */}
-          <div className="max-w-5xl mx-auto mb-16">
+          <div className="max-w-5xl mx-auto mb-12">
             <h3 className="text-3xl font-bold text-center mb-6">Solution Architecture</h3>
             <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
               <div className="text-center mb-3">
@@ -184,37 +157,20 @@ export default function AIAnalyticsPage() {
             </div>
           </div>
 
-          {/* Analytics */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold text-center mb-8">Analytics</h3>
+          {/* Outcomes + Analytics (compact band) */}
+          <div className="mb-4">
+            <h3 className="text-3xl font-bold text-center mb-6">Outcomes & Analytics</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                {k:"95%", l:"Prediction Accuracy"},
-                {k:"40%", l:"Faster Decisions"},
-                {k:"25%", l:"Cost Reduction"},
-                {k:"80%", l:"Operational Efficiency"}
+                {k:"36%", l:"Faster time to treatment"},
+                {k:"$1M+", l:"Annual revenue lift"},
+                {k:"95%+", l:"RPM device connectivity"},
+                {k:"80%", l:"Operational efficiency"}
               ].map((s)=> (
                 <div key={s.l} className="text-center p-6 rounded-2xl border border-white/20 bg-white/10 backdrop-blur">
                   <div className="text-4xl font-bold">{s.k}</div>
                   <div className="text-orange-100 mt-2">{s.l}</div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Outcomes */}
-          <div className="mb-4">
-            <h3 className="text-3xl font-bold text-center mb-6">Outcomes</h3>
-            <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-4 text-sm">
-              {[
-                "Up to $1M+ annual revenue lift",
-                "36% faster time to treatment",
-                "Fewer ED visits and higher satisfaction",
-                "Improved adherence and refill completion",
-                "Lower no‑shows with proactive engagement",
-                "Agent handle time reduction via automation"
-              ].map((o)=> (
-                <div key={o} className="rounded-xl border border-white/20 bg-white/10 backdrop-blur px-4 py-3">{o}</div>
               ))}
             </div>
           </div>
