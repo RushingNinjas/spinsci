@@ -49,6 +49,80 @@ export default function AIAnalyticsPage() {
         </div>
       </section>
 
+      {/* SpinSci AI Factory - Deep Dive */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">SpinSci AI Factory</h2>
+            <p className="text-orange-100 max-w-3xl mx-auto">Why AI agents, how they’re different, and how SpinSci composes scheduling, billing, and pharmacy sub‑agents on top of your EHRs.</p>
+          </div>
+
+          {/* Why AI Agents Are Different */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+            {[
+              {t:"Autonomy vs. Reactivity", d:"Agents plan, decide and act to achieve goals — not just respond to inputs.", icon:"🚀"},
+              {t:"Multi‑Step Reasoning", d:"Break down problems, think ahead and adapt like a digital project manager.", icon:"🧠"},
+              {t:"Tool & Data Orchestration", d:"Coordinate APIs, systems and streams like a conductor leading an orchestra.", icon:"🔗"},
+              {t:"Personalization at Scale", d:"Remember context, learn preferences and tailor actions per user/workflow.", icon:"👤"},
+              {t:"Continuous Improvement", d:"LLMs + feedback loops = smarter outcomes over time, automatically.", icon:"⚡"}
+            ].map((i) => (
+              <div key={i.t} className="p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur hover:bg-white/15 transition-colors">
+                <div className="text-2xl mb-2">{i.icon}</div>
+                <div className="text-lg font-semibold mb-1">{i.t}</div>
+                <div className="text-orange-100/90">{i.d}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* SpinSci AI Agents & Sub‑Agents */}
+          <div className="grid md:grid-cols-3 gap-6 mb-14">
+            {[
+              {title:"Scheduling Agents", items:["Patient Identification & Verification","Appointment Cancel","Appointment Confirm","Appointment Reschedule","Open Scheduling","Direct Scheduling","Ticket Scheduling","Prior‑Auth","Registration (Orders / Referral)"]},
+              {title:"Billing Agents", items:["Account Summary","Bill Pay","Payment Reconciliation","General Ledger"]},
+              {title:"Pharmacy Refill Agents", items:["Prescription Details","Prescription Order","Refill Reminder","Pickup Reminder","Benefits Management","Adherence Tracking"]}
+            ].map((c) => (
+              <div key={c.title} className="relative overflow-hidden rounded-2xl bg-white/10 border border-white/20 backdrop-blur">
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-400 via-pink-400 to-red-400" />
+                <div className="p-6">
+                  <h4 className="text-lg font-semibold mb-3">{c.title}</h4>
+                  <ul className="space-y-2 text-orange-100/90 text-sm">
+                    {c.items.map((x) => (
+                      <li key={x} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-white/70 inline-block" /><span>{x}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Solution Overview Flow */}
+          <div className="max-w-3xl mx-auto">
+            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
+              <div className="text-center">
+                <div className="inline-block rounded-xl px-5 py-3 bg-gradient-to-r from-orange-500/30 to-red-500/30 border border-white/20">LLM (Brain of the System)</div>
+              </div>
+              <div className="my-3 text-center text-white/80">↓</div>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                <div className="rounded-xl px-5 py-3 bg-white/10 border border-white/20">MCP (Middleware Communication Platform)</div>
+                <div className="rounded-xl px-5 py-3 bg-white/10 border border-white/20">Rules Abstraction Engine</div>
+              </div>
+              <div className="my-3 text-center text-white/80">↓</div>
+              <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
+                {["Epic","Oracle","Athena","NextGen","eClinicalWorks","Cerner"].map((e) => (
+                  <span key={e} className="rounded-full px-3 py-1 bg-white/10 border border-white/20">{e}</span>
+                ))}
+              </div>
+              <div className="my-3 text-center text-white/80">↓</div>
+              <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
+                {["Scheduling Agents","Billing Agents","Pharmacy Agents"].map((e) => (
+                  <span key={e} className="rounded-full px-3 py-1 bg-gradient-to-r from-orange-500/30 to-red-500/30 border border-white/20">{e}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Features */}
       <section className="py-32 px-6 bg-gradient-to-r from-slate-800/50 to-orange-900/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
