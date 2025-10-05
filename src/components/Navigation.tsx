@@ -17,7 +17,7 @@ export default function Navigation() {
       children: [
         { name: "Patient Access Care", href: "/solutions/patient-access" },
         { name: "Clinical Communication", href: "/solutions/clinical-communication" },
-        { name: "Financial Services", href: "/solutions/financial-services" },
+        { name: "Patient Financial Services", href: "/solutions/financial-services" },
         { name: "SpinSci AI", href: "/solutions/ai-analytics" },
         { name: "Portfolio Offerings", href: "/solutions/portfolio-offerings" }
       ]
